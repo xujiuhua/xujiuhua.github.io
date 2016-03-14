@@ -59,32 +59,32 @@
 
 <meta name="description" content="ECMAScript数据类型　　5种简单数据类型（也称为基本数据类型）Undefined、Null、Boolean、Number、String，还有一种负责类型Object
 typeof操作符
-[ ] “undefined”——如果这个值未定义；
-[ ] “boolean”——如果这个值是布尔值；
-[ ] “number”——如果这个值是数值；
-[ ] “string”——如果这个值是字符串；
-[">
+“undefined”——如果这个值未定义；
+“boolean”——如果这个值是布尔值；
+“number”——如果这个值是数值；
+“string”——如果这个值是字符串；
+“null”——如果这个值是对象或">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Read JavaScript-02">
 <meta property="og:url" content="http://yoursite.com/2016/03/14/Read-JavaScript-02/index.html">
 <meta property="og:site_name" content="Johuer's blog">
 <meta property="og:description" content="ECMAScript数据类型　　5种简单数据类型（也称为基本数据类型）Undefined、Null、Boolean、Number、String，还有一种负责类型Object
 typeof操作符
-[ ] “undefined”——如果这个值未定义；
-[ ] “boolean”——如果这个值是布尔值；
-[ ] “number”——如果这个值是数值；
-[ ] “string”——如果这个值是字符串；
-[">
-<meta property="og:updated_time" content="2016-03-14T14:37:57.850Z">
+“undefined”——如果这个值未定义；
+“boolean”——如果这个值是布尔值；
+“number”——如果这个值是数值；
+“string”——如果这个值是字符串；
+“null”——如果这个值是对象或">
+<meta property="og:updated_time" content="2016-03-14T15:05:14.472Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Read JavaScript-02">
 <meta name="twitter:description" content="ECMAScript数据类型　　5种简单数据类型（也称为基本数据类型）Undefined、Null、Boolean、Number、String，还有一种负责类型Object
 typeof操作符
-[ ] “undefined”——如果这个值未定义；
-[ ] “boolean”——如果这个值是布尔值；
-[ ] “number”——如果这个值是数值；
-[ ] “string”——如果这个值是字符串；
-[">
+“undefined”——如果这个值未定义；
+“boolean”——如果这个值是布尔值；
+“number”——如果这个值是数值；
+“string”——如果这个值是字符串；
+“null”——如果这个值是对象或">
 
 
 
@@ -261,19 +261,55 @@ typeof操作符
       
         <h5 id="ECMAScript数据类型"><a href="#ECMAScript数据类型" class="headerlink" title="ECMAScript数据类型"></a>ECMAScript数据类型</h5><p>　　5种简单数据类型（也称为基本数据类型）Undefined、Null、Boolean、Number、String，还有一种负责类型Object</p>
 <h6 id="typeof操作符"><a href="#typeof操作符" class="headerlink" title="typeof操作符"></a>typeof操作符</h6><ul>
-<li>[ ] “undefined”——如果这个值未定义；</li>
-<li>[ ] “boolean”——如果这个值是布尔值；</li>
-<li>[ ] “number”——如果这个值是数值；</li>
-<li>[ ] “string”——如果这个值是字符串；</li>
-<li>[ ] “null”——如果这个值是对象或者null；</li>
-<li>[ ] “function”——如果这个值是函数；</li>
+<li>“undefined”——如果这个值未定义；</li>
+<li>“boolean”——如果这个值是布尔值；</li>
+<li>“number”——如果这个值是数值；</li>
+<li>“string”——如果这个值是字符串；</li>
+<li>“null”——如果这个值是对象或者null；</li>
+<li>“function”——如果这个值是函数；</li>
 </ul>
 <a id="more"></a>
 <p>tips：<br>typeof操作符的操作数，可以是变量也可以是数值字面量<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="keyword">typeof</span> message);</span><br><span class="line">alert(<span class="keyword">typeof</span> <span class="number">57</span>);</span><br></pre></td></tr></table></figure></p>
 <h6 id="Undefined类型"><a href="#Undefined类型" class="headerlink" title="Undefined类型"></a>Undefined类型</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message;</span><br><span class="line"><span class="comment">// var age</span></span><br><span class="line">alert(message); <span class="comment">// "undefined"</span></span><br><span class="line">alert(age); <span class="comment">// 产生错误</span></span><br><span class="line">--------------------------------------</span><br><span class="line"><span class="keyword">var</span> message; </span><br><span class="line"><span class="comment">// var age</span></span><br><span class="line">alert(<span class="keyword">typeof</span> message); <span class="comment">// "undefined"</span></span><br><span class="line">alert(<span class="keyword">typeof</span> age); <span class="comment">// "undefined"</span></span><br></pre></td></tr></table></figure>
 <h6 id="Null类型"><a href="#Null类型" class="headerlink" title="Null类型"></a>Null类型</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> car = <span class="literal">null</span>;</span><br><span class="line">alert(<span class="keyword">typeof</span> car); <span class="comment">// "object"</span></span><br></pre></td></tr></table></figure>
 <p>如果定义的变量准备在将来用户保存对象，那么最好将改变量初始化null而不是其他值，这样一来，只要直接检测null值就知道改变量是否保存了一个对象的引用。</p>
-<h6 id="Boolean类型"><a href="#Boolean类型" class="headerlink" title="Boolean类型"></a>Boolean类型</h6><p>各种数据类型也Boolean的转换规则，如下表格<br>| 数据类型        | 转换为true的值   |  转换为false的值  |<br>| ——–   | —–:  | :—-:  |<br>| Boolean     | true |   false     |<br>| String        |   任何非空字符串   |   “”(空字符串)   |<br>| Number        |    任何非零数字（包括无穷大）    |  0和nan  |<br>| Object        |    任何对象    |  null  |<br>| Undefined        |    n/a   |  undefined  |</p>
+<h6 id="Boolean类型"><a href="#Boolean类型" class="headerlink" title="Boolean类型"></a>Boolean类型</h6><p>各种数据类型也Boolean的转换规则，如下表格</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th style="text-align:right">转换为true的值</th>
+<th style="text-align:center">转换为false的值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boolean</td>
+<td style="text-align:right">true</td>
+<td style="text-align:center">false</td>
+</tr>
+<tr>
+<td>String</td>
+<td style="text-align:right">任何非空字符串</td>
+<td style="text-align:center">“”(空字符串)</td>
+</tr>
+<tr>
+<td>Number</td>
+<td style="text-align:right">任何非零数字（包括无穷大）</td>
+<td style="text-align:center">0和nan</td>
+</tr>
+<tr>
+<td>Object</td>
+<td style="text-align:right">任何对象</td>
+<td style="text-align:center">null</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td style="text-align:right">n/a</td>
+<td style="text-align:center">undefined</td>
+</tr>
+</tbody>
+</table>
 <h6 id="Number类型"><a href="#Number类型" class="headerlink" title="Number类型"></a>Number类型</h6><ol>
 <li>整数</li>
 </ol>
@@ -281,9 +317,9 @@ typeof操作符
 <p>十六进制，前面两位必须是0x,后跟（0~9或A~F),其中字母A~F可大写也可小写<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hexNum1 = <span class="number">0xA</span>; <span class="comment">// 十六进制10</span></span><br><span class="line"><span class="keyword">var</span> hexNum2 = <span class="number">0x1f</span>; <span class="comment">// 十六进制31</span></span><br></pre></td></tr></table></figure></p>
 <p>tips:<br>在进行算数计算时，所有八进制和十六进制都会被转换为十进制数值。</p>
 <ol>
-<li>浮点数<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> floatNum = <span class="number">3.125e7</span>; <span class="comment">// 31250000（3.125*10^7);</span></span><br><span class="line">-------------------------------------------------</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">0.1</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">0.2</span>;</span><br><span class="line">alert(a + b); <span class="comment">// 0.30000000000000004</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>浮点数</li>
 </ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> floatNum = <span class="number">3.125e7</span>; <span class="comment">// 31250000（3.125*10^7);</span></span><br><span class="line">--------------------------------------</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">0.1</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">0.2</span>;</span><br><span class="line">alert(a + b); <span class="comment">// 0.30000000000000004</span></span><br></pre></td></tr></table></figure>
 <p>tips:永远不要测试某个特定的浮点数值。<br>范围：</p>
 
       
