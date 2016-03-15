@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="jQuery," />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -57,16 +57,19 @@
 
 
 
-<meta name="description" content="1、官方解释：在匹配元素上存储任意相关数据 或 返回匹配的元素集合中的第一个元素的给定名称的数据存储的值。">
+<meta name="description" content="操作符位操作符1. 按位非 由一个波浪号表示（~）123var num1 = 25;      // 二进制00000000000000000000000000011001var num2 = ~num1;   // 二进制11111111111111111111111111100110alert(num2); // -26
+相当于操作数的负值减1，同123var num1 = 25;var nu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery's data()">
-<meta property="og:url" content="http://yoursite.com/2016/03/10/jQuery-s-data/index.html">
+<meta property="og:title" content="javascript操作符-位操作符">
+<meta property="og:url" content="http://yoursite.com/2016/03/15/Read-JavaScript-03/index.html">
 <meta property="og:site_name" content="Johuer's blog">
-<meta property="og:description" content="1、官方解释：在匹配元素上存储任意相关数据 或 返回匹配的元素集合中的第一个元素的给定名称的数据存储的值。">
-<meta property="og:updated_time" content="2016-03-10T16:38:59.281Z">
+<meta property="og:description" content="操作符位操作符1. 按位非 由一个波浪号表示（~）123var num1 = 25;      // 二进制00000000000000000000000000011001var num2 = ~num1;   // 二进制11111111111111111111111111100110alert(num2); // -26
+相当于操作数的负值减1，同123var num1 = 25;var nu">
+<meta property="og:updated_time" content="2016-03-15T08:16:22.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery's data()">
-<meta name="twitter:description" content="1、官方解释：在匹配元素上存储任意相关数据 或 返回匹配的元素集合中的第一个元素的给定名称的数据存储的值。">
+<meta name="twitter:title" content="javascript操作符-位操作符">
+<meta name="twitter:description" content="操作符位操作符1. 按位非 由一个波浪号表示（~）123var num1 = 25;      // 二进制00000000000000000000000000011001var num2 = ~num1;   // 二进制11111111111111111111111111100110alert(num2); // -26
+相当于操作数的负值减1，同123var num1 = 25;var nu">
 
 
 
@@ -84,7 +87,7 @@
   };
 </script>
 
-  <title> jQuery's data() | Johuer's blog </title>
+  <title> javascript操作符-位操作符 | Johuer's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -202,7 +205,7 @@
             
             
               
-                jQuery's data()
+                javascript操作符-位操作符
               
             
           </h1>
@@ -214,8 +217,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-10T23:45:10+08:00" content="2016-03-10">
-              2016-03-10
+            <time itemprop="dateCreated" datetime="2016-03-15T15:37:21+08:00" content="2016-03-15">
+              2016-03-15
             </time>
           </span>
 
@@ -241,14 +244,14 @@
       
 
       
-        <h4 id="1、官方解释："><a href="#1、官方解释：" class="headerlink" title="1、官方解释："></a>1、官方解释：</h4><p>在匹配元素上存储任意相关数据 或 返回匹配的元素集合中的第一个元素的给定名称的数据存储的值。<br><a id="more"></a></p>
-<h4 id="2、作用效果"><a href="#2、作用效果" class="headerlink" title="2、作用效果"></a>2、作用效果</h4><p>方法允许我们在DOM元素上绑定任意类型的数据,避免了循环引用的内存泄漏风险。</p>
-<h4 id="3、方法"><a href="#3、方法" class="headerlink" title="3、方法"></a>3、方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.data( key, value )</span><br><span class="line">    .data( key, value )</span><br><span class="line">    .data( obj )</span><br><span class="line">.data( key )</span><br><span class="line">    .data( key )</span><br><span class="line">    .data()</span><br></pre></td></tr></table></figure>
-<h4 id="4、HTML5-data"><a href="#4、HTML5-data" class="headerlink" title="4、HTML5 data-*"></a>4、HTML5 data-*</h4><p>从jQuery 1.4.3起， HTML 5 data- 属性 将自动被引用到jQuery的数据对象中。嵌入式破折号处理属性（ attributes）的方式在 jQuery 1.6 中已经改变，以使之符合W3C HTML5 规范.<br>必须是驼峰式写法：<br><span style="color:red;">he second statement of the code above correctly refers to the data-last-value attribute of the element. In case no data is stored with the passed key, jQuery searches among the attributes of the element, converting a camel-cased string into a dashed string and then prepending data- to the result. So, the string lastValue is converted to data-last-value.<span><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">"page"</span> <span class="attr">data-last-value</span>=<span class="string">"43"</span> <span class="attr">data-hidden</span>=<span class="string">"true"</span> <span class="attr">data-options</span>=<span class="string">'&#123;"name":"John"&#125;'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></span></span></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$( <span class="string">"div"</span> ).data( <span class="string">"role"</span> ) === <span class="string">"page"</span>;</span><br><span class="line">$( <span class="string">"div"</span> ).data( <span class="string">"lastValue"</span> ) === <span class="number">43</span>;</span><br><span class="line">$( <span class="string">"div"</span> ).data( <span class="string">"hidden"</span> ) === <span class="literal">true</span>;</span><br><span class="line">$( <span class="string">"div"</span> ).data( <span class="string">"options"</span> ).name === <span class="string">"John"</span>;</span><br></pre></td></tr></table></figure>
-<h4 id="5、数据安全"><a href="#5、数据安全" class="headerlink" title="5、数据安全"></a>5、数据安全</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;test&quot;&gt;test&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#test"</span>).data(<span class="string">"safe"</span>, <span class="string">"数据安全"</span>);</span><br></pre></td></tr></table></figure>
-<p>从Dom节点中，是没办法看到绑定的数据。但是可以获取到</p>
+        <h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><h4 id="位操作符"><a href="#位操作符" class="headerlink" title="位操作符"></a><strong>位操作符</strong></h4><h5 id="1-按位非"><a href="#1-按位非" class="headerlink" title="1. 按位非"></a>1. 按位非</h5><p> 由一个波浪号表示（~）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">25</span>;      <span class="comment">// 二进制00000000000000000000000000011001</span></span><br><span class="line"><span class="keyword">var</span> num2 = ~num1;   <span class="comment">// 二进制11111111111111111111111111100110</span></span><br><span class="line">alert(num2); <span class="comment">// -26</span></span><br></pre></td></tr></table></figure></p>
+<p>相当于操作数的负值减1，同<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">25</span>;</span><br><span class="line"><span class="keyword">var</span> num2 = -num1 - <span class="number">1</span>;</span><br><span class="line">alert(num2); <span class="comment">// -26</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="2-按位与"><a href="#2-按位与" class="headerlink" title="2. 按位与"></a>2. 按位与</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="number">25</span> &amp; <span class="number">3</span>;</span><br><span class="line">alert(result); <span class="comment">//1</span></span><br><span class="line"><span class="number">25</span> = <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0001</span> <span class="number">1001</span></span><br><span class="line"><span class="number">3</span> =  <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0011</span></span><br><span class="line">---------------------------------------------</span><br><span class="line">AND = <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0001</span></span><br></pre></td></tr></table></figure>
+<h5 id="3-按位或"><a href="#3-按位或" class="headerlink" title="3. 按位或"></a>3. 按位或</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="number">25</span> | <span class="number">3</span>;</span><br><span class="line">alert(result); <span class="comment">//27</span></span><br><span class="line"><span class="number">25</span> = <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0001</span> <span class="number">1001</span></span><br><span class="line"><span class="number">3</span> =  <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0011</span></span><br><span class="line">--------------------------------------------</span><br><span class="line">OR = <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0001</span> <span class="number">1011</span></span><br></pre></td></tr></table></figure>
+<h5 id="4-按位异或"><a href="#4-按位异或" class="headerlink" title="4. 按位异或"></a>4. 按位异或</h5><p> 只有一个为1才返回1<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="number">25</span> ^ <span class="number">3</span>;</span><br><span class="line">alert(result); <span class="comment">//26</span></span><br><span class="line"><span class="number">25</span> = <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0001</span> <span class="number">1001</span></span><br><span class="line"><span class="number">3</span> =  <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0011</span></span><br><span class="line">---------------------------------------------</span><br><span class="line">XOR = <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0001</span> <span class="number">1010</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="5-左移"><a href="#5-左移" class="headerlink" title="5. 左移"></a>5. 左移</h5><p>以0填充空位，且不影响操作数的符号位<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oldValue = <span class="number">2</span>; <span class="comment">// 二进制10</span></span><br><span class="line"><span class="keyword">var</span> newValue = oldValue &lt;&lt; <span class="number">5</span>; <span class="comment">// 二进制1000000 十进制64</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="6-有符号位的右移"><a href="#6-有符号位的右移" class="headerlink" title="6. 有符号位的右移"></a>6. 有符号位的右移</h5><p><code>&gt;&gt;</code>原理同上，只是方向相反在左边补充0</p>
+<h5 id="7-无符号位的右移"><a href="#7-无符号位的右移" class="headerlink" title="7. 无符号位的右移"></a>7. 无符号位的右移</h5><p><code>&gt;&gt;&gt;</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oldValue = <span class="number">-64</span>; <span class="comment">// 二进制11111111111111111111111111000000</span></span><br><span class="line"><span class="keyword">var</span> newValue = oldValue &gt;&gt;&gt; <span class="number">5</span>; <span class="comment">//十进制134217726</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -263,7 +266,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/jQuery/" rel="tag">#jQuery</a>
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
         </div>
       
@@ -272,17 +275,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/09/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/03/14/Read-JavaScript-02/" rel="next" title="Read JavaScript-02">
+                <i class="fa fa-chevron-left"></i> Read JavaScript-02
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/11/Read-JavaScript-01/" rel="prev" title="Read JavaScript-01">
-                Read JavaScript-01 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -393,7 +392,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、官方解释："><span class="nav-number">1.</span> <span class="nav-text">1、官方解释：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、作用效果"><span class="nav-number">2.</span> <span class="nav-text">2、作用效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、方法"><span class="nav-number">3.</span> <span class="nav-text">3、方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、HTML5-data"><span class="nav-number">4.</span> <span class="nav-text">4、HTML5 data-*</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、数据安全"><span class="nav-number">5.</span> <span class="nav-text">5、数据安全</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作符"><span class="nav-number">1.</span> <span class="nav-text">操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#位操作符"><span class="nav-number">1.0.1.</span> <span class="nav-text">位操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-按位非"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">1. 按位非</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-按位与"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">2. 按位与</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-按位或"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">3. 按位或</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-按位异或"><span class="nav-number">1.0.1.4.</span> <span class="nav-text">4. 按位异或</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-左移"><span class="nav-number">1.0.1.5.</span> <span class="nav-text">5. 左移</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-有符号位的右移"><span class="nav-number">1.0.1.6.</span> <span class="nav-text">6. 有符号位的右移</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-无符号位的右移"><span class="nav-number">1.0.1.7.</span> <span class="nav-text">7. 无符号位的右移</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
