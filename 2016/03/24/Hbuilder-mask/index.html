@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="hbuilder,mui,mask,h5+,webview," />
 
 
 
@@ -59,28 +59,19 @@
 
 
 
-<meta name="description" content="1、JavaScript实现一个完整的JavaScript实现应该有下列三个部分组成：
-
-[ ] 核心（ECMAScript）
-[ ] 文档对象模型（DOM）
-[ ] 浏览器对象模型（BOM）">
+<meta name="description" content="首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置WebviewStyle，在此基础上，APP延伸实现popover(e.g.新闻分享弹出框)、侧滑菜单等界面。
+mask: (String 类型 )窗口的遮罩用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，此时Webview窗口的点击操作会触">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Read JavaScript-01">
-<meta property="og:url" content="http://yoursite.com/2016/03/11/Read-JavaScript-01/index.html">
+<meta property="og:title" content="Hbuilder开发APP(01)-遮罩蒙版">
+<meta property="og:url" content="http://yoursite.com/2016/03/24/Hbuilder-mask/index.html">
 <meta property="og:site_name" content="Johuer's blog">
-<meta property="og:description" content="1、JavaScript实现一个完整的JavaScript实现应该有下列三个部分组成：
-
-[ ] 核心（ECMAScript）
-[ ] 文档对象模型（DOM）
-[ ] 浏览器对象模型（BOM）">
-<meta property="og:updated_time" content="2016-03-23T15:49:18.509Z">
+<meta property="og:description" content="首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置WebviewStyle，在此基础上，APP延伸实现popover(e.g.新闻分享弹出框)、侧滑菜单等界面。
+mask: (String 类型 )窗口的遮罩用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，此时Webview窗口的点击操作会触">
+<meta property="og:updated_time" content="2016-03-24T07:07:36.828Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Read JavaScript-01">
-<meta name="twitter:description" content="1、JavaScript实现一个完整的JavaScript实现应该有下列三个部分组成：
-
-[ ] 核心（ECMAScript）
-[ ] 文档对象模型（DOM）
-[ ] 浏览器对象模型（BOM）">
+<meta name="twitter:title" content="Hbuilder开发APP(01)-遮罩蒙版">
+<meta name="twitter:description" content="首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置WebviewStyle，在此基础上，APP延伸实现popover(e.g.新闻分享弹出框)、侧滑菜单等界面。
+mask: (String 类型 )窗口的遮罩用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，此时Webview窗口的点击操作会触">
 
 
 
@@ -98,7 +89,7 @@
   };
 </script>
 
-  <title> Read JavaScript-01 | Johuer's blog </title>
+  <title> Hbuilder开发APP(01)-遮罩蒙版 | Johuer's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -226,7 +217,7 @@
             
             
               
-                Read JavaScript-01
+                Hbuilder开发APP(01)-遮罩蒙版
               
             
           </h1>
@@ -238,8 +229,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-11T17:15:41+08:00" content="2016-03-11">
-              2016-03-11
+            <time itemprop="dateCreated" datetime="2016-03-24T14:58:10+08:00" content="2016-03-24">
+              2016-03-24
             </time>
           </span>
 
@@ -252,8 +243,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
+                  <a href="/categories/APP开发/" itemprop="url" rel="index">
+                    <span itemprop="name">APP开发</span>
                   </a>
                 </span>
 
@@ -268,8 +259,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/11/Read-JavaScript-01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/11/Read-JavaScript-01/" itemprop="commentsCount"></span>
+                <a href="/2016/03/24/Hbuilder-mask/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/Hbuilder-mask/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -291,15 +282,17 @@
       
 
       
-        <h4 id="1、JavaScript实现"><a href="#1、JavaScript实现" class="headerlink" title="1、JavaScript实现"></a>1、JavaScript实现</h4><p>一个完整的<code>JavaScript</code>实现应该有下列三个部分组成：</p>
-<ul>
-<li>[ ] 核心（ECMAScript）</li>
-<li>[ ] 文档对象模型（DOM）</li>
-<li>[ ] 浏览器对象模型（BOM）</li>
-</ul>
+        <p>首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置<a href="http://www.html5plus.org/doc/zh_cn/webview.html#plus.webview.WebviewStyle" target="_blank" rel="external">WebviewStyle</a>，在此基础上，APP延伸实现popover(e.g.新闻分享弹出框)、侧滑菜单等界面。</p>
+<p>mask: (String 类型 )窗口的遮罩<br>用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，<code>此时Webview窗口的点击操作会触发maskClick事件</code>。 字符串类型，可取值： rgba格式字符串，定义纯色遮罩层样式，如”rgba(0,0,0,0.5)”，表示黑色半透明； “none”，表示不使用遮罩层； 默认值为”none”，即无遮罩层。</p>
 <a id="more"></a>
-<h5 id="1-1、ECMAScript"><a href="#1-1、ECMAScript" class="headerlink" title="1.1、ECMAScript"></a>1.1、ECMAScript</h5><p>　　由ECMA-262定义的ECMAScript与WEB浏览器没有依赖关系，我们常见的WEB浏览器只是ECMAScript可能实现的宿主环境之一，还包括Node、Adobe Flash.</p>
-<h5 id="1-2、DOM"><a href="#1-2、DOM" class="headerlink" title="1.2、DOM"></a>1.2、DOM</h5><p>　　为保持浏览器兼容，负责定制WEB通信标准的W3C开始着手规划DOM.</p>
+<hr>
+<p>下面介绍两种实现方式。</p>
+<h2 id="H5-实现"><a href="#H5-实现" class="headerlink" title="H5+实现"></a><strong>H5+实现</strong></h2><p>Example:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">	&lt;meta charset="utf-8"&gt;</span><br><span class="line">	&lt;title&gt;Webview Example&lt;/title&gt;</span><br><span class="line">	&lt;script type="text/javascript"&gt;</span><br><span class="line">var ws = null;</span><br><span class="line">// H5 plus事件处理</span><br><span class="line">function plusReady()&#123;</span><br><span class="line">	ws = plus.webview.currentWebview();</span><br><span class="line">	// 显示遮罩层</span><br><span class="line">	ws.setStyle(&#123;mask:"rgba(0,0,0,0.5)"&#125;);</span><br><span class="line">	// 点击关闭遮罩层</span><br><span class="line">	ws.addEventListener("maskClick",function()&#123;</span><br><span class="line">		ws.setStyle(&#123;mask:"none"&#125;);</span><br><span class="line">	&#125;,false);</span><br><span class="line">&#125;</span><br><span class="line">if(window.plus)&#123;</span><br><span class="line">	plusReady();</span><br><span class="line">&#125;else&#123;</span><br><span class="line">	document.addEventListener("plusready",plusReady,false);</span><br><span class="line">&#125;</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		Webview窗口页面加载完成事件</span><br><span class="line">		&lt;br/&gt;</span><br><span class="line">		点击窗口关闭遮罩层</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="MUI封装实现"><a href="#MUI封装实现" class="headerlink" title="MUI封装实现"></a><strong>MUI封装实现</strong></h2><p>遮罩蒙版常用的操作包括：创建、显示、关闭，如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// callback为用户点击蒙版时自动执行的回调；</span><br><span class="line">// 此方法就如H5+中监听maskClick事件</span><br><span class="line">var mask = mui.createMask(callback);</span><br><span class="line">mask.show();//显示遮罩</span><br><span class="line">mask.close();//关闭遮罩</span><br></pre></td></tr></table></figure></p>
+<p>Example:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charset="UTF-8"&gt;</span><br><span class="line">        &lt;!-- 引入css --&gt;</span><br><span class="line">        &lt;link rel="stylesheet" type="text/css" href="../css/mui.min.css"/&gt;</span><br><span class="line">        &lt;title&gt;主界面&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">    	这是mui主界面</span><br><span class="line">    	&lt;br /&gt;</span><br><span class="line">    	&lt;input id="show-btn" type="button" value="mui显示侧滑菜单"/&gt;</span><br><span class="line">    	</span><br><span class="line">        &lt;script src="../js/mui.min.js"&gt;&lt;/script&gt;</span><br><span class="line">    	&lt;script type="text/javascript"&gt;</span><br><span class="line">    		var mask = mui.createMask(_closeMask);</span><br><span class="line">    		mui.plusReady(function() &#123;</span><br><span class="line">    			mask.show();</span><br><span class="line">    		&#125;);</span><br><span class="line">    		// 此方法执行完成后，会自动关闭遮罩，</span><br><span class="line">    		// return false可以阻止事件发生，不关闭遮罩</span><br><span class="line">    		function _closeMask() &#123;</span><br><span class="line">    			// doSomething();</span><br><span class="line">    			</span><br><span class="line">    			// 注意：此处不能调用mask.close()</span><br><span class="line">    			// mask.close()等价于执行了一次回调_closeMask</span><br><span class="line">    			// 如此就会进入死循环</span><br><span class="line">//  			mask.close();</span><br><span class="line">    		&#125;</span><br><span class="line">    	&lt;/script&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -314,7 +307,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+            <a href="/tags/hbuilder/" rel="tag">#hbuilder</a>
+          
+            <a href="/tags/mui/" rel="tag">#mui</a>
+          
+            <a href="/tags/mask/" rel="tag">#mask</a>
+          
+            <a href="/tags/h5/" rel="tag">#h5+</a>
+          
+            <a href="/tags/webview/" rel="tag">#webview</a>
           
         </div>
       
@@ -323,17 +324,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/10/jQuery-s-data/" rel="next" title="jQuery's data()">
-                <i class="fa fa-chevron-left"></i> jQuery's data()
+              <a href="/2016/03/23/web-style-guide-general/" rel="next" title="前端编码规范(1/4)-通用规范">
+                <i class="fa fa-chevron-left"></i> 前端编码规范(1/4)-通用规范
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/14/Read-JavaScript-02/" rel="prev" title="Read JavaScript-02">
-                Read JavaScript-02 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -359,8 +356,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/11/Read-JavaScript-01/"
-           data-title="Read JavaScript-01" data-url="http://yoursite.com/2016/03/11/Read-JavaScript-01/">
+      <div class="ds-thread" data-thread-key="2016/03/24/Hbuilder-mask/"
+           data-title="Hbuilder开发APP(01)-遮罩蒙版" data-url="http://yoursite.com/2016/03/24/Hbuilder-mask/">
       </div>
     
   </div>
@@ -472,7 +469,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、JavaScript实现"><span class="nav-number">1.</span> <span class="nav-text">1、JavaScript实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1、ECMAScript"><span class="nav-number">1.1.</span> <span class="nav-text">1.1、ECMAScript</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2、DOM"><span class="nav-number">1.2.</span> <span class="nav-text">1.2、DOM</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#H5-实现"><span class="nav-number">1.</span> <span class="nav-text">H5+实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MUI封装实现"><span class="nav-number">2.</span> <span class="nav-text">MUI封装实现</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
