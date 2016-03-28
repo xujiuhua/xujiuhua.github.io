@@ -285,9 +285,16 @@
       
         
           <p>mui提供了两种侧滑导航实现：webview模式和div模式，两种模式各有优劣，适用于不同的场景。<a href="http://dev.dcloud.net.cn/mui/ui/#offcanvas">两者区别</a>。</p>
-<p>这里介绍webview模式的侧滑，这里介绍一种模式：菜单不动，主界面右移，其实原理不难!!!</p>
+<p>这里介绍webview模式的侧滑</p>
 <hr>
-<h2 id="html"><a href="#html" class="headerlink" title="html"></a><strong>html</strong></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//主界面</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mui-content"</span>&gt;</span></span><br><span class="line">    这是H5主界面</span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"show-btn"</span> <span class="attr">class</span>=<span class="string">"mui-btn-green"</span>&gt;</span>显示侧滑菜单<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a><strong>实现步骤</strong></h2><ol>
+<li>创建两个页面：主页面和侧滑页面</li>
+<li>主页面预加载侧滑页面</li>
+<li>主页面监听遮罩的<code>maskClick</code>事件</li>
+<li>打开侧滑菜单</li>
+<li>关闭侧滑菜单</li>
+</ol>
+<hr>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/03/24/hbuilder-drag/#more" rel="contents">
               阅读全文 &raquo;
