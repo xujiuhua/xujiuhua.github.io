@@ -216,6 +216,132 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/28/hbuilder-drag-style/" itemprop="url">
+                  Hbuilder开发APP(03)-侧滑方式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-28T09:24:55+08:00" content="2016-03-28">
+              2016-03-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/APP开发/" itemprop="url" rel="index">
+                    <span itemprop="name">APP开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/28/hbuilder-drag-style/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/hbuilder-drag-style/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="侧滑方式"><a href="#侧滑方式" class="headerlink" title="侧滑方式"></a><strong>侧滑方式</strong></h2><ul>
+<li>主界面移动，菜单不动</li>
+<li>主界面不动，菜单移动</li>
+<li>整体移动（整体滑动暂不支持android手机，因为两个页面的移动动画，无法保证同步性）</li>
+</ul>
+<h2 id="方式一：主界面移动，菜单不动"><a href="#方式一：主界面移动，菜单不动" class="headerlink" title="方式一：主界面移动，菜单不动"></a><strong>方式一：主界面移动，菜单不动</strong></h2><blockquote>
+<p>主界面的zindex必须大于侧滑界面的zindex</p>
+</blockquote>
+<h3 id="主界面预加载侧滑页面"><a href="#主界面预加载侧滑页面" class="headerlink" title="主界面预加载侧滑页面"></a>主界面预加载侧滑页面</h3><p>主界面样式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">main.setStyle(&#123;</span><br><span class="line">	zindex: <span class="number">2</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>侧滑页面样式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">styles: &#123;</span><br><span class="line">	left: <span class="number">0</span>,		<span class="comment">// 窗口水平向右的偏移量</span></span><br><span class="line">	width: <span class="string">'70%'</span>,   <span class="comment">// 侧滑页面只显示70%</span></span><br><span class="line">	zindex: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/28/hbuilder-drag-style/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/24/hbuilder-drag/" itemprop="url">
                   Hbuilder开发APP(02)-侧滑(webview模式)
                 </a>
@@ -643,112 +769,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/14/Read-JavaScript-02/" itemprop="url">
-                  Read JavaScript-02
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-14T16:46:01+08:00" content="2016-03-14">
-              2016-03-14
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/14/Read-JavaScript-02/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/14/Read-JavaScript-02/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h5 id="ECMAScript数据类型"><a href="#ECMAScript数据类型" class="headerlink" title="ECMAScript数据类型"></a><strong>ECMAScript数据类型</strong></h5><p>　　5种简单数据类型（也称为基本数据类型）Undefined、Null、Boolean、Number、String，还有一种负责类型Object</p>
-<h6 id="typeof操作符"><a href="#typeof操作符" class="headerlink" title="typeof操作符"></a><strong>typeof操作符</strong></h6><ul>
-<li>“undefined”——如果这个值未定义；</li>
-<li>“boolean”——如果这个值是布尔值；</li>
-<li>“number”——如果这个值是数值；</li>
-<li>“string”——如果这个值是字符串；</li>
-<li>“null”——如果这个值是对象或者null；</li>
-<li>“function”——如果这个值是函数；</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/14/Read-JavaScript-02/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -794,7 +814,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
