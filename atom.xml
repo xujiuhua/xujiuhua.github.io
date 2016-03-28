@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-28T06:21:45.483Z</updated>
+  <updated>2016-03-28T07:48:25.775Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/03/28/hbuilder-drag-style/"/>
     <id>http://yoursite.com/2016/03/28/hbuilder-drag-style/</id>
     <published>2016-03-28T01:24:55.000Z</published>
-    <updated>2016-03-28T06:21:45.483Z</updated>
+    <updated>2016-03-28T07:48:25.775Z</updated>
     
     <content type="html">&lt;h2 id=&quot;侧滑方式&quot;&gt;&lt;a href=&quot;#侧滑方式&quot; class=&quot;headerlink&quot; title=&quot;侧滑方式&quot;&gt;&lt;/a&gt;&lt;strong&gt;侧滑方式&lt;/strong&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;主界面移动，菜单不动&lt;/li&gt;
@@ -49,6 +49,7 @@
 &lt;li&gt;菜单关闭一定要在动画结束后执行，否则感觉很突兀。&lt;/li&gt;
 &lt;li&gt;理解侧滑菜单显示和关闭的先后步骤。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/xujiuhua/Mui-Mask&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;源码&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
