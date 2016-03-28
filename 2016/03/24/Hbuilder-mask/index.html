@@ -59,19 +59,22 @@
 
 
 
-<meta name="description" content="首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置WebviewStyle，在此基础上，APP延伸实现popover(e.g.新闻分享弹出框)、侧滑菜单等界面。
-mask: (String 类型 )窗口的遮罩用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，此时Webview窗口的点击操作会触">
+<meta name="description" content="首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置WebviewStyle，
+可实现功能：1、弹出框popover(e.g.新闻分享弹出框)2、侧滑菜单3、新手引导页后续会逐一介绍
+mask: (String 类型 )窗口的遮罩用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，此时Webvie">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hbuilder开发APP(01)-遮罩蒙版">
 <meta property="og:url" content="http://yoursite.com/2016/03/24/Hbuilder-mask/index.html">
 <meta property="og:site_name" content="Johuer's blog">
-<meta property="og:description" content="首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置WebviewStyle，在此基础上，APP延伸实现popover(e.g.新闻分享弹出框)、侧滑菜单等界面。
-mask: (String 类型 )窗口的遮罩用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，此时Webview窗口的点击操作会触">
-<meta property="og:updated_time" content="2016-03-24T08:18:58.368Z">
+<meta property="og:description" content="首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置WebviewStyle，
+可实现功能：1、弹出框popover(e.g.新闻分享弹出框)2、侧滑菜单3、新手引导页后续会逐一介绍
+mask: (String 类型 )窗口的遮罩用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，此时Webvie">
+<meta property="og:updated_time" content="2016-03-28T00:49:42.778Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hbuilder开发APP(01)-遮罩蒙版">
-<meta name="twitter:description" content="首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置WebviewStyle，在此基础上，APP延伸实现popover(e.g.新闻分享弹出框)、侧滑菜单等界面。
-mask: (String 类型 )窗口的遮罩用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，此时Webview窗口的点击操作会触">
+<meta name="twitter:description" content="首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置WebviewStyle，
+可实现功能：1、弹出框popover(e.g.新闻分享弹出框)2、侧滑菜单3、新手引导页后续会逐一介绍
+mask: (String 类型 )窗口的遮罩用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，此时Webvie">
 
 
 
@@ -282,7 +285,8 @@ mask: (String 类型 )窗口的遮罩用于设置Webview窗口的遮罩层样式
       
 
       
-        <p>首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置<a href="http://www.html5plus.org/doc/zh_cn/webview.html#plus.webview.WebviewStyle" target="_blank" rel="external">WebviewStyle</a>，在此基础上，APP延伸实现popover(e.g.新闻分享弹出框)、侧滑菜单等界面。</p>
+        <p>首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置<a href="http://www.html5plus.org/doc/zh_cn/webview.html#plus.webview.WebviewStyle" target="_blank" rel="external">WebviewStyle</a>，</p>
+<p>可实现功能：<br>1、弹出框popover(e.g.新闻分享弹出框)<br>2、侧滑菜单<br>3、新手引导页<br>后续会逐一介绍</p>
 <p>mask: (String 类型 )窗口的遮罩<br>用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，<code>此时Webview窗口的点击操作会触发maskClick事件</code>。 字符串类型，可取值： rgba格式字符串，定义纯色遮罩层样式，如”rgba(0,0,0,0.5)”，表示黑色半透明； “none”，表示不使用遮罩层； 默认值为”none”，即无遮罩层。</p>
 <a id="more"></a>
 <hr>
