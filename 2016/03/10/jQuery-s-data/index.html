@@ -59,16 +59,16 @@
 
 
 
-<meta name="description" content="1、官方解释：在匹配元素上存储任意相关数据 或 返回匹配的元素集合中的第一个元素的给定名称的数据存储的值。">
+<meta name="description" content="1&amp;#x3001;&amp;#x5B98;&amp;#x65B9;&amp;#x89E3;&amp;#x91CA;&amp;#xFF1A;&amp;#x5728;&amp;#x5339;&amp;#x914D;&amp;#x5143;&amp;#x7D20;&amp;#x4E0A;&amp;#x5B58;&amp;#x50A8;&amp;#x4EFB;&amp;#x610F;&amp;#x76F8;&amp;#x5173;&amp;#x6570;&amp;#x636E; &amp;#x6216; &amp;#x8FD4;&amp;#x56DE;&amp;#x5339;&amp;#x91">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery's data()">
 <meta property="og:url" content="http://yoursite.com/2016/03/10/jQuery-s-data/index.html">
 <meta property="og:site_name" content="Johuer's blog">
-<meta property="og:description" content="1、官方解释：在匹配元素上存储任意相关数据 或 返回匹配的元素集合中的第一个元素的给定名称的数据存储的值。">
+<meta property="og:description" content="1&amp;#x3001;&amp;#x5B98;&amp;#x65B9;&amp;#x89E3;&amp;#x91CA;&amp;#xFF1A;&amp;#x5728;&amp;#x5339;&amp;#x914D;&amp;#x5143;&amp;#x7D20;&amp;#x4E0A;&amp;#x5B58;&amp;#x50A8;&amp;#x4EFB;&amp;#x610F;&amp;#x76F8;&amp;#x5173;&amp;#x6570;&amp;#x636E; &amp;#x6216; &amp;#x8FD4;&amp;#x56DE;&amp;#x5339;&amp;#x91">
 <meta property="og:updated_time" content="2016-03-10T16:38:59.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery's data()">
-<meta name="twitter:description" content="1、官方解释：在匹配元素上存储任意相关数据 或 返回匹配的元素集合中的第一个元素的给定名称的数据存储的值。">
+<meta name="twitter:description" content="1&amp;#x3001;&amp;#x5B98;&amp;#x65B9;&amp;#x89E3;&amp;#x91CA;&amp;#xFF1A;&amp;#x5728;&amp;#x5339;&amp;#x914D;&amp;#x5143;&amp;#x7D20;&amp;#x4E0A;&amp;#x5B58;&amp;#x50A8;&amp;#x4EFB;&amp;#x610F;&amp;#x76F8;&amp;#x5173;&amp;#x6570;&amp;#x636E; &amp;#x6216; &amp;#x8FD4;&amp;#x56DE;&amp;#x5339;&amp;#x91">
 
 
 
@@ -260,14 +260,14 @@
       
 
       
-        <h4 id="1、官方解释："><a href="#1、官方解释：" class="headerlink" title="1、官方解释："></a>1、官方解释：</h4><p>在匹配元素上存储任意相关数据 或 返回匹配的元素集合中的第一个元素的给定名称的数据存储的值。<br><a id="more"></a></p>
-<h4 id="2、作用效果"><a href="#2、作用效果" class="headerlink" title="2、作用效果"></a>2、作用效果</h4><p>方法允许我们在DOM元素上绑定任意类型的数据,避免了循环引用的内存泄漏风险。</p>
-<h4 id="3、方法"><a href="#3、方法" class="headerlink" title="3、方法"></a>3、方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.data( key, value )</span><br><span class="line">    .data( key, value )</span><br><span class="line">    .data( obj )</span><br><span class="line">.data( key )</span><br><span class="line">    .data( key )</span><br><span class="line">    .data()</span><br></pre></td></tr></table></figure>
-<h4 id="4、HTML5-data"><a href="#4、HTML5-data" class="headerlink" title="4、HTML5 data-*"></a>4、HTML5 data-*</h4><p>从jQuery 1.4.3起， HTML 5 data- 属性 将自动被引用到jQuery的数据对象中。嵌入式破折号处理属性（ attributes）的方式在 jQuery 1.6 中已经改变，以使之符合W3C HTML5 规范.<br>必须是驼峰式写法：<br><span style="color:red;">he second statement of the code above correctly refers to the data-last-value attribute of the element. In case no data is stored with the passed key, jQuery searches among the attributes of the element, converting a camel-cased string into a dashed string and then prepending data- to the result. So, the string lastValue is converted to data-last-value.<span><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">"page"</span> <span class="attr">data-last-value</span>=<span class="string">"43"</span> <span class="attr">data-hidden</span>=<span class="string">"true"</span> <span class="attr">data-options</span>=<span class="string">'&#123;"name":"John"&#125;'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></span></span></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$( <span class="string">"div"</span> ).data( <span class="string">"role"</span> ) === <span class="string">"page"</span>;</span><br><span class="line">$( <span class="string">"div"</span> ).data( <span class="string">"lastValue"</span> ) === <span class="number">43</span>;</span><br><span class="line">$( <span class="string">"div"</span> ).data( <span class="string">"hidden"</span> ) === <span class="literal">true</span>;</span><br><span class="line">$( <span class="string">"div"</span> ).data( <span class="string">"options"</span> ).name === <span class="string">"John"</span>;</span><br></pre></td></tr></table></figure>
-<h4 id="5、数据安全"><a href="#5、数据安全" class="headerlink" title="5、数据安全"></a>5、数据安全</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;test&quot;&gt;test&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#test"</span>).data(<span class="string">"safe"</span>, <span class="string">"数据安全"</span>);</span><br></pre></td></tr></table></figure>
-<p>从Dom节点中，是没办法看到绑定的数据。但是可以获取到</p>
+        <h4 id="1&#x3001;&#x5B98;&#x65B9;&#x89E3;&#x91CA;&#xFF1A;"><a href="#1&#x3001;&#x5B98;&#x65B9;&#x89E3;&#x91CA;&#xFF1A;" class="headerlink" title="1&#x3001;&#x5B98;&#x65B9;&#x89E3;&#x91CA;&#xFF1A;"></a>1&#x3001;&#x5B98;&#x65B9;&#x89E3;&#x91CA;&#xFF1A;</h4><p>&#x5728;&#x5339;&#x914D;&#x5143;&#x7D20;&#x4E0A;&#x5B58;&#x50A8;&#x4EFB;&#x610F;&#x76F8;&#x5173;&#x6570;&#x636E; &#x6216; &#x8FD4;&#x56DE;&#x5339;&#x914D;&#x7684;&#x5143;&#x7D20;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7ED9;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x503C;&#x3002;<br><a id="more"></a></p>
+<h4 id="2&#x3001;&#x4F5C;&#x7528;&#x6548;&#x679C;"><a href="#2&#x3001;&#x4F5C;&#x7528;&#x6548;&#x679C;" class="headerlink" title="2&#x3001;&#x4F5C;&#x7528;&#x6548;&#x679C;"></a>2&#x3001;&#x4F5C;&#x7528;&#x6548;&#x679C;</h4><p>&#x65B9;&#x6CD5;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5728;DOM&#x5143;&#x7D20;&#x4E0A;&#x7ED1;&#x5B9A;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;,&#x907F;&#x514D;&#x4E86;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x98CE;&#x9669;&#x3002;</p>
+<h4 id="3&#x3001;&#x65B9;&#x6CD5;"><a href="#3&#x3001;&#x65B9;&#x6CD5;" class="headerlink" title="3&#x3001;&#x65B9;&#x6CD5;"></a>3&#x3001;&#x65B9;&#x6CD5;</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.data( key, value )</span><br><span class="line">    .data( key, value )</span><br><span class="line">    .data( obj )</span><br><span class="line">.data( key )</span><br><span class="line">    .data( key )</span><br><span class="line">    .data()</span><br></pre></td></tr></table></figure>
+<h4 id="4&#x3001;HTML5-data"><a href="#4&#x3001;HTML5-data" class="headerlink" title="4&#x3001;HTML5 data-*"></a>4&#x3001;HTML5 data-*</h4><p>&#x4ECE;jQuery 1.4.3&#x8D77;&#xFF0C; HTML 5 data- &#x5C5E;&#x6027; &#x5C06;&#x81EA;&#x52A8;&#x88AB;&#x5F15;&#x7528;&#x5230;jQuery&#x7684;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x4E2D;&#x3002;&#x5D4C;&#x5165;&#x5F0F;&#x7834;&#x6298;&#x53F7;&#x5904;&#x7406;&#x5C5E;&#x6027;&#xFF08; attributes&#xFF09;&#x7684;&#x65B9;&#x5F0F;&#x5728; jQuery 1.6 &#x4E2D;&#x5DF2;&#x7ECF;&#x6539;&#x53D8;&#xFF0C;&#x4EE5;&#x4F7F;&#x4E4B;&#x7B26;&#x5408;W3C HTML5 &#x89C4;&#x8303;.<br>&#x5FC5;&#x987B;&#x662F;&#x9A7C;&#x5CF0;&#x5F0F;&#x5199;&#x6CD5;&#xFF1A;<br><span style="color:red;">he second statement of the code above correctly refers to the data-last-value attribute of the element. In case no data is stored with the passed key, jQuery searches among the attributes of the element, converting a camel-cased string into a dashed string and then prepending data- to the result. So, the string lastValue is converted to data-last-value.<span><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">&quot;page&quot;</span> <span class="attr">data-last-value</span>=<span class="string">&quot;43&quot;</span> <span class="attr">data-hidden</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-options</span>=<span class="string">&apos;{&quot;name&quot;:&quot;John&quot;}&apos;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></span></span></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$( <span class="string">&quot;div&quot;</span> ).data( <span class="string">&quot;role&quot;</span> ) === <span class="string">&quot;page&quot;</span>;</span><br><span class="line">$( <span class="string">&quot;div&quot;</span> ).data( <span class="string">&quot;lastValue&quot;</span> ) === <span class="number">43</span>;</span><br><span class="line">$( <span class="string">&quot;div&quot;</span> ).data( <span class="string">&quot;hidden&quot;</span> ) === <span class="literal">true</span>;</span><br><span class="line">$( <span class="string">&quot;div&quot;</span> ).data( <span class="string">&quot;options&quot;</span> ).name === <span class="string">&quot;John&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="5&#x3001;&#x6570;&#x636E;&#x5B89;&#x5168;"><a href="#5&#x3001;&#x6570;&#x636E;&#x5B89;&#x5168;" class="headerlink" title="5&#x3001;&#x6570;&#x636E;&#x5B89;&#x5168;"></a>5&#x3001;&#x6570;&#x636E;&#x5B89;&#x5168;</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;test&quot;&gt;test&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#test&quot;</span>).data(<span class="string">&quot;safe&quot;</span>, <span class="string">&quot;&#x6570;&#x636E;&#x5B89;&#x5168;&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>&#x4ECE;Dom&#x8282;&#x70B9;&#x4E2D;&#xFF0C;&#x662F;&#x6CA1;&#x529E;&#x6CD5;&#x770B;&#x5230;&#x7ED1;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x3002;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;</p>
 
       
     </div>
@@ -373,7 +373,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -381,7 +381,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -390,7 +390,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

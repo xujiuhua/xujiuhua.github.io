@@ -216,6 +216,133 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/24/hbuilder-drag/" itemprop="url">
+                  Hbuilder开发APP(02)-侧滑(webview模式)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-24T22:42:25+08:00" content="2016-03-24">
+              2016-03-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/APP开发/" itemprop="url" rel="index">
+                    <span itemprop="name">APP开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/24/hbuilder-drag/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/hbuilder-drag/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>mui&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x4FA7;&#x6ED1;&#x5BFC;&#x822A;&#x5B9E;&#x73B0;&#xFF1A;webview&#x6A21;&#x5F0F;&#x548C;div&#x6A21;&#x5F0F;&#xFF0C;&#x4E24;&#x79CD;&#x6A21;&#x5F0F;&#x5404;&#x6709;&#x4F18;&#x52A3;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x573A;&#x666F;&#x3002;<a href="http://dev.dcloud.net.cn/mui/ui/#offcanvas">&#x4E24;&#x8005;&#x533A;&#x522B;</a>&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x4ECB;&#x7ECD;webview&#x6A21;&#x5F0F;&#x7684;&#x4FA7;&#x6ED1;</p>
+<hr>
+<h2 id="&#x5B9E;&#x73B0;&#x6B65;&#x9AA4;"><a href="#&#x5B9E;&#x73B0;&#x6B65;&#x9AA4;" class="headerlink" title="&#x5B9E;&#x73B0;&#x6B65;&#x9AA4;"></a><strong>&#x5B9E;&#x73B0;&#x6B65;&#x9AA4;</strong></h2><ol>
+<li>&#x521B;&#x5EFA;&#x4E24;&#x4E2A;&#x9875;&#x9762;&#xFF1A;&#x4E3B;&#x9875;&#x9762;&#x548C;&#x4FA7;&#x6ED1;&#x9875;&#x9762;</li>
+<li>&#x4E3B;&#x9875;&#x9762;&#x9884;&#x52A0;&#x8F7D;&#x4FA7;&#x6ED1;&#x9875;&#x9762;</li>
+<li>&#x4E3B;&#x9875;&#x9762;&#x76D1;&#x542C;&#x906E;&#x7F69;&#x7684;<code>maskClick</code>&#x4E8B;&#x4EF6;</li>
+<li>&#x6253;&#x5F00;&#x4FA7;&#x6ED1;&#x83DC;&#x5355;</li>
+<li>&#x5173;&#x95ED;&#x4FA7;&#x6ED1;&#x83DC;&#x5355;</li>
+</ol>
+<hr>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/24/hbuilder-drag/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/24/Hbuilder-mask/" itemprop="url">
                   Hbuilder开发APP(01)-遮罩蒙版
                 </a>
@@ -284,9 +411,9 @@
 
       
         
-          <p>首先要理清概念，遮罩蒙版是属于HTML5+规范中Webview的配置<a href="http://www.html5plus.org/doc/zh_cn/webview.html#plus.webview.WebviewStyle">WebviewStyle</a>，</p>
-<p>可实现功能：<br>1、弹出框popover(e.g.新闻分享弹出框)<br>2、侧滑菜单<br>3、新手引导页<br>后续会逐一介绍</p>
-<p>mask: (String 类型 )窗口的遮罩<br>用于设置Webview窗口的遮罩层样式，遮罩层会覆盖Webview中所有内容，包括子webview，并且截获webview的所有触屏事件，<code>此时Webview窗口的点击操作会触发maskClick事件</code>。 字符串类型，可取值： rgba格式字符串，定义纯色遮罩层样式，如”rgba(0,0,0,0.5)”，表示黑色半透明； “none”，表示不使用遮罩层； 默认值为”none”，即无遮罩层。</p>
+          <p>&#x9996;&#x5148;&#x8981;&#x7406;&#x6E05;&#x6982;&#x5FF5;&#xFF0C;&#x906E;&#x7F69;&#x8499;&#x7248;&#x662F;&#x5C5E;&#x4E8E;HTML5+&#x89C4;&#x8303;&#x4E2D;Webview&#x7684;&#x914D;&#x7F6E;<a href="http://www.html5plus.org/doc/zh_cn/webview.html#plus.webview.WebviewStyle">WebviewStyle</a>&#xFF0C;</p>
+<p>&#x53EF;&#x5B9E;&#x73B0;&#x529F;&#x80FD;&#xFF1A;<br>1&#x3001;&#x5F39;&#x51FA;&#x6846;popover(e.g.&#x65B0;&#x95FB;&#x5206;&#x4EAB;&#x5F39;&#x51FA;&#x6846;)<br>2&#x3001;&#x4FA7;&#x6ED1;&#x83DC;&#x5355;<br>3&#x3001;&#x65B0;&#x624B;&#x5F15;&#x5BFC;&#x9875;<br>&#x540E;&#x7EED;&#x4F1A;&#x9010;&#x4E00;&#x4ECB;&#x7ECD;</p>
+<p>mask: (String &#x7C7B;&#x578B; )&#x7A97;&#x53E3;&#x7684;&#x906E;&#x7F69;<br>&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;Webview&#x7A97;&#x53E3;&#x7684;&#x906E;&#x7F69;&#x5C42;&#x6837;&#x5F0F;&#xFF0C;&#x906E;&#x7F69;&#x5C42;&#x4F1A;&#x8986;&#x76D6;Webview&#x4E2D;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF0C;&#x5305;&#x62EC;&#x5B50;webview&#xFF0C;&#x5E76;&#x4E14;&#x622A;&#x83B7;webview&#x7684;&#x6240;&#x6709;&#x89E6;&#x5C4F;&#x4E8B;&#x4EF6;&#xFF0C;<code>&#x6B64;&#x65F6;Webview&#x7A97;&#x53E3;&#x7684;&#x70B9;&#x51FB;&#x64CD;&#x4F5C;&#x4F1A;&#x89E6;&#x53D1;maskClick&#x4E8B;&#x4EF6;</code>&#x3002; &#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x53D6;&#x503C;&#xFF1A; rgba&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B9A;&#x4E49;&#x7EAF;&#x8272;&#x906E;&#x7F69;&#x5C42;&#x6837;&#x5F0F;&#xFF0C;&#x5982;&#x201D;rgba(0,0,0,0.5)&#x201D;&#xFF0C;&#x8868;&#x793A;&#x9ED1;&#x8272;&#x534A;&#x900F;&#x660E;&#xFF1B; &#x201C;none&#x201D;&#xFF0C;&#x8868;&#x793A;&#x4E0D;&#x4F7F;&#x7528;&#x906E;&#x7F69;&#x5C42;&#xFF1B; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x201D;none&#x201D;&#xFF0C;&#x5373;&#x65E0;&#x906E;&#x7F69;&#x5C42;&#x3002;</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/03/24/Hbuilder-mask/#more" rel="contents">
               阅读全文 &raquo;
@@ -384,12 +511,12 @@
 
       
         
-          <h2 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h2><p> HTML, Javascript and CSS / SCSS</p>
+          <h2 id="&#x9002;&#x7528;&#x8303;&#x56F4;"><a href="#&#x9002;&#x7528;&#x8303;&#x56F4;" class="headerlink" title="&#x9002;&#x7528;&#x8303;&#x56F4;"></a>&#x9002;&#x7528;&#x8303;&#x56F4;</h2><p> HTML, Javascript and CSS / SCSS</p>
 <hr>
-<h3 id="文件-资源名称"><a href="#文件-资源名称" class="headerlink" title="文件 / 资源名称"></a>文件 / 资源名称</h3><p>在同一个web工程中的所有文件名应该遵循同样命名规则。为了易读使用”-“符是最好想法，同样这也是权威url的使用规则。<br>(i.e. <code>//example.com/blog/my-blog-entry</code> or <code>//s.example.com/images/big-black-background.jpg</code>).</p>
-<p>以字母开头，禁止使用数字开头（除非有版本等特殊要求）。</p>
-<p>所有字母要小写</p>
-<p>有种情况，如果资源存在继承关系(i.e. .min.js, .min.css)，这种情况建议使用”.”分隔符</p>
+<h3 id="&#x6587;&#x4EF6;-&#x8D44;&#x6E90;&#x540D;&#x79F0;"><a href="#&#x6587;&#x4EF6;-&#x8D44;&#x6E90;&#x540D;&#x79F0;" class="headerlink" title="&#x6587;&#x4EF6; / &#x8D44;&#x6E90;&#x540D;&#x79F0;"></a>&#x6587;&#x4EF6; / &#x8D44;&#x6E90;&#x540D;&#x79F0;</h3><p>&#x5728;&#x540C;&#x4E00;&#x4E2A;web&#x5DE5;&#x7A0B;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x540D;&#x5E94;&#x8BE5;&#x9075;&#x5FAA;&#x540C;&#x6837;&#x547D;&#x540D;&#x89C4;&#x5219;&#x3002;&#x4E3A;&#x4E86;&#x6613;&#x8BFB;&#x4F7F;&#x7528;&#x201D;-&#x201C;&#x7B26;&#x662F;&#x6700;&#x597D;&#x60F3;&#x6CD5;&#xFF0C;&#x540C;&#x6837;&#x8FD9;&#x4E5F;&#x662F;&#x6743;&#x5A01;url&#x7684;&#x4F7F;&#x7528;&#x89C4;&#x5219;&#x3002;<br>(i.e. <code>//example.com/blog/my-blog-entry</code> or <code>//s.example.com/images/big-black-background.jpg</code>).</p>
+<p>&#x4EE5;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#xFF0C;&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x6570;&#x5B57;&#x5F00;&#x5934;&#xFF08;&#x9664;&#x975E;&#x6709;&#x7248;&#x672C;&#x7B49;&#x7279;&#x6B8A;&#x8981;&#x6C42;&#xFF09;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x5B57;&#x6BCD;&#x8981;&#x5C0F;&#x5199;</p>
+<p>&#x6709;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x679C;&#x8D44;&#x6E90;&#x5B58;&#x5728;&#x7EE7;&#x627F;&#x5173;&#x7CFB;(i.e. .min.js, .min.css)&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x201D;.&#x201D;&#x5206;&#x9694;&#x7B26;</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/03/23/web-style-guide-general/#more" rel="contents">
               阅读全文 &raquo;
@@ -487,8 +614,8 @@
 
       
         
-          <h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><h4 id="位操作符"><a href="#位操作符" class="headerlink" title="位操作符"></a><strong>位操作符</strong></h4><h5 id="1-按位非"><a href="#1-按位非" class="headerlink" title="1. 按位非"></a>1. 按位非</h5><p> 由一个波浪号表示（~）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">25</span>;      <span class="comment">// 二进制00000000000000000000000000011001</span></span><br><span class="line"><span class="keyword">var</span> num2 = ~num1;   <span class="comment">// 二进制11111111111111111111111111100110</span></span><br><span class="line">alert(num2); <span class="comment">// -26</span></span><br></pre></td></tr></table></figure></p>
-<p>相当于操作数的负值减1，同<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">25</span>;</span><br><span class="line"><span class="keyword">var</span> num2 = -num1 - <span class="number">1</span>;</span><br><span class="line">alert(num2); <span class="comment">// -26</span></span><br></pre></td></tr></table></figure></p>
+          <h2 id="&#x64CD;&#x4F5C;&#x7B26;"><a href="#&#x64CD;&#x4F5C;&#x7B26;" class="headerlink" title="&#x64CD;&#x4F5C;&#x7B26;"></a>&#x64CD;&#x4F5C;&#x7B26;</h2><h4 id="&#x4F4D;&#x64CD;&#x4F5C;&#x7B26;"><a href="#&#x4F4D;&#x64CD;&#x4F5C;&#x7B26;" class="headerlink" title="&#x4F4D;&#x64CD;&#x4F5C;&#x7B26;"></a><strong>&#x4F4D;&#x64CD;&#x4F5C;&#x7B26;</strong></h4><h5 id="1-&#x6309;&#x4F4D;&#x975E;"><a href="#1-&#x6309;&#x4F4D;&#x975E;" class="headerlink" title="1. &#x6309;&#x4F4D;&#x975E;"></a>1. &#x6309;&#x4F4D;&#x975E;</h5><p> &#x7531;&#x4E00;&#x4E2A;&#x6CE2;&#x6D6A;&#x53F7;&#x8868;&#x793A;&#xFF08;~&#xFF09;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">25</span>;      <span class="comment">// &#x4E8C;&#x8FDB;&#x5236;00000000000000000000000000011001</span></span><br><span class="line"><span class="keyword">var</span> num2 = ~num1;   <span class="comment">// &#x4E8C;&#x8FDB;&#x5236;11111111111111111111111111100110</span></span><br><span class="line">alert(num2); <span class="comment">// -26</span></span><br></pre></td></tr></table></figure></p>
+<p>&#x76F8;&#x5F53;&#x4E8E;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x8D1F;&#x503C;&#x51CF;1&#xFF0C;&#x540C;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">25</span>;</span><br><span class="line"><span class="keyword">var</span> num2 = -num1 - <span class="number">1</span>;</span><br><span class="line">alert(num2); <span class="comment">// -26</span></span><br></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/03/15/Read-JavaScript-03/#more" rel="contents">
               阅读全文 &raquo;
@@ -586,139 +713,17 @@
 
       
         
-          <h5 id="ECMAScript数据类型"><a href="#ECMAScript数据类型" class="headerlink" title="ECMAScript数据类型"></a><strong>ECMAScript数据类型</strong></h5><p>　　5种简单数据类型（也称为基本数据类型）Undefined、Null、Boolean、Number、String，还有一种负责类型Object</p>
-<h6 id="typeof操作符"><a href="#typeof操作符" class="headerlink" title="typeof操作符"></a><strong>typeof操作符</strong></h6><ul>
-<li>“undefined”——如果这个值未定义；</li>
-<li>“boolean”——如果这个值是布尔值；</li>
-<li>“number”——如果这个值是数值；</li>
-<li>“string”——如果这个值是字符串；</li>
-<li>“null”——如果这个值是对象或者null；</li>
-<li>“function”——如果这个值是函数；</li>
+          <h5 id="ECMAScript&#x6570;&#x636E;&#x7C7B;&#x578B;"><a href="#ECMAScript&#x6570;&#x636E;&#x7C7B;&#x578B;" class="headerlink" title="ECMAScript&#x6570;&#x636E;&#x7C7B;&#x578B;"></a><strong>ECMAScript&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></h5><p>&#x3000;&#x3000;5&#x79CD;&#x7B80;&#x5355;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;&#x4E5F;&#x79F0;&#x4E3A;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF09;Undefined&#x3001;Null&#x3001;Boolean&#x3001;Number&#x3001;String&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x8D1F;&#x8D23;&#x7C7B;&#x578B;Object</p>
+<h6 id="typeof&#x64CD;&#x4F5C;&#x7B26;"><a href="#typeof&#x64CD;&#x4F5C;&#x7B26;" class="headerlink" title="typeof&#x64CD;&#x4F5C;&#x7B26;"></a><strong>typeof&#x64CD;&#x4F5C;&#x7B26;</strong></h6><ul>
+<li>&#x201C;undefined&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x672A;&#x5B9A;&#x4E49;&#xFF1B;</li>
+<li>&#x201C;boolean&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5E03;&#x5C14;&#x503C;&#xFF1B;</li>
+<li>&#x201C;number&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x6570;&#x503C;&#xFF1B;</li>
+<li>&#x201C;string&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;</li>
+<li>&#x201C;null&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5BF9;&#x8C61;&#x6216;&#x8005;null&#xFF1B;</li>
+<li>&#x201C;function&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x51FD;&#x6570;&#xFF1B;</li>
 </ul>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/03/14/Read-JavaScript-02/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/11/Read-JavaScript-01/" itemprop="url">
-                  Read JavaScript-01
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-11T17:15:41+08:00" content="2016-03-11">
-              2016-03-11
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/11/Read-JavaScript-01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/11/Read-JavaScript-01/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="1、JavaScript实现"><a href="#1、JavaScript实现" class="headerlink" title="1、JavaScript实现"></a>1、JavaScript实现</h4><p>一个完整的<code>JavaScript</code>实现应该有下列三个部分组成：</p>
-<ul>
-<li>[ ] 核心（ECMAScript）</li>
-<li>[ ] 文档对象模型（DOM）</li>
-<li>[ ] 浏览器对象模型（BOM）</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/11/Read-JavaScript-01/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -789,7 +794,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -797,7 +802,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -806,7 +811,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
