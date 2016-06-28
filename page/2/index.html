@@ -216,6 +216,132 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/28/hbuilder-drag-style/" itemprop="url">
+                  Hbuilder开发APP(03)-侧滑方式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-28T09:24:55+08:00" content="2016-03-28">
+              2016-03-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/APP开发/" itemprop="url" rel="index">
+                    <span itemprop="name">APP开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/28/hbuilder-drag-style/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/hbuilder-drag-style/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="&#x4FA7;&#x6ED1;&#x65B9;&#x5F0F;"><a href="#&#x4FA7;&#x6ED1;&#x65B9;&#x5F0F;" class="headerlink" title="&#x4FA7;&#x6ED1;&#x65B9;&#x5F0F;"></a><strong>&#x4FA7;&#x6ED1;&#x65B9;&#x5F0F;</strong></h2><ul>
+<li>&#x4E3B;&#x754C;&#x9762;&#x79FB;&#x52A8;&#xFF0C;&#x83DC;&#x5355;&#x4E0D;&#x52A8;</li>
+<li>&#x4E3B;&#x754C;&#x9762;&#x4E0D;&#x52A8;&#xFF0C;&#x83DC;&#x5355;&#x79FB;&#x52A8;</li>
+<li>&#x6574;&#x4F53;&#x79FB;&#x52A8;&#xFF08;&#x6574;&#x4F53;&#x6ED1;&#x52A8;&#x6682;&#x4E0D;&#x652F;&#x6301;android&#x624B;&#x673A;&#xFF0C;&#x56E0;&#x4E3A;&#x4E24;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x79FB;&#x52A8;&#x52A8;&#x753B;&#xFF0C;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x540C;&#x6B65;&#x6027;&#xFF09;</li>
+</ul>
+<h2 id="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x4E3B;&#x754C;&#x9762;&#x79FB;&#x52A8;&#xFF0C;&#x83DC;&#x5355;&#x4E0D;&#x52A8;"><a href="#&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x4E3B;&#x754C;&#x9762;&#x79FB;&#x52A8;&#xFF0C;&#x83DC;&#x5355;&#x4E0D;&#x52A8;" class="headerlink" title="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x4E3B;&#x754C;&#x9762;&#x79FB;&#x52A8;&#xFF0C;&#x83DC;&#x5355;&#x4E0D;&#x52A8;"></a><strong>&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x4E3B;&#x754C;&#x9762;&#x79FB;&#x52A8;&#xFF0C;&#x83DC;&#x5355;&#x4E0D;&#x52A8;</strong></h2><blockquote>
+<p>&#x4E3B;&#x754C;&#x9762;&#x7684;zindex&#x5FC5;&#x987B;&#x5927;&#x4E8E;&#x4FA7;&#x6ED1;&#x754C;&#x9762;&#x7684;zindex</p>
+</blockquote>
+<h3 id="&#x4E3B;&#x754C;&#x9762;&#x9884;&#x52A0;&#x8F7D;&#x4FA7;&#x6ED1;&#x9875;&#x9762;"><a href="#&#x4E3B;&#x754C;&#x9762;&#x9884;&#x52A0;&#x8F7D;&#x4FA7;&#x6ED1;&#x9875;&#x9762;" class="headerlink" title="&#x4E3B;&#x754C;&#x9762;&#x9884;&#x52A0;&#x8F7D;&#x4FA7;&#x6ED1;&#x9875;&#x9762;"></a>&#x4E3B;&#x754C;&#x9762;&#x9884;&#x52A0;&#x8F7D;&#x4FA7;&#x6ED1;&#x9875;&#x9762;</h3><p>&#x4E3B;&#x754C;&#x9762;&#x6837;&#x5F0F;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">main.setStyle({</span><br><span class="line">	zindex: <span class="number">2</span></span><br><span class="line">});</span><br></pre></td></tr></table></figure></p>
+<p>&#x4FA7;&#x6ED1;&#x9875;&#x9762;&#x6837;&#x5F0F;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">styles: {</span><br><span class="line">	left: <span class="number">0</span>,		<span class="comment">// &#x7A97;&#x53E3;&#x6C34;&#x5E73;&#x5411;&#x53F3;&#x7684;&#x504F;&#x79FB;&#x91CF;</span></span><br><span class="line">	width: <span class="string">&apos;70%&apos;</span>,   <span class="comment">// &#x4FA7;&#x6ED1;&#x9875;&#x9762;&#x53EA;&#x663E;&#x793A;70%</span></span><br><span class="line">	zindex: <span class="number">1</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/28/hbuilder-drag-style/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/24/hbuilder-drag/" itemprop="url">
                   Hbuilder开发APP(02)-侧滑(webview模式)
                 </a>
@@ -643,112 +769,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/14/Read-JavaScript-02/" itemprop="url">
-                  Read JavaScript-02
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-14T16:46:01+08:00" content="2016-03-14">
-              2016-03-14
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/14/Read-JavaScript-02/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/14/Read-JavaScript-02/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h5 id="ECMAScript&#x6570;&#x636E;&#x7C7B;&#x578B;"><a href="#ECMAScript&#x6570;&#x636E;&#x7C7B;&#x578B;" class="headerlink" title="ECMAScript&#x6570;&#x636E;&#x7C7B;&#x578B;"></a><strong>ECMAScript&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></h5><p>&#x3000;&#x3000;5&#x79CD;&#x7B80;&#x5355;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;&#x4E5F;&#x79F0;&#x4E3A;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF09;Undefined&#x3001;Null&#x3001;Boolean&#x3001;Number&#x3001;String&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x8D1F;&#x8D23;&#x7C7B;&#x578B;Object</p>
-<h6 id="typeof&#x64CD;&#x4F5C;&#x7B26;"><a href="#typeof&#x64CD;&#x4F5C;&#x7B26;" class="headerlink" title="typeof&#x64CD;&#x4F5C;&#x7B26;"></a><strong>typeof&#x64CD;&#x4F5C;&#x7B26;</strong></h6><ul>
-<li>&#x201C;undefined&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x672A;&#x5B9A;&#x4E49;&#xFF1B;</li>
-<li>&#x201C;boolean&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5E03;&#x5C14;&#x503C;&#xFF1B;</li>
-<li>&#x201C;number&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x6570;&#x503C;&#xFF1B;</li>
-<li>&#x201C;string&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;</li>
-<li>&#x201C;null&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5BF9;&#x8C61;&#x6216;&#x8005;null&#xFF1B;</li>
-<li>&#x201C;function&#x201D;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x51FD;&#x6570;&#xFF1B;</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/14/Read-JavaScript-02/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -794,7 +814,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -802,7 +822,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -811,7 +831,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
