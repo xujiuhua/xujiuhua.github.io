@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Johuer&#39;s blog</title>
+  <title>Johuer&#39;s Blog</title>
   <subtitle>多学一点知识，就少写一行代码</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-26T07:06:15.436Z</updated>
+  <updated>2016-09-26T07:29:20.073Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,16 +20,31 @@
     <link href="http://yoursite.com/2016/09/26/Spring-Mybatis/"/>
     <id>http://yoursite.com/2016/09/26/Spring-Mybatis/</id>
     <published>2016-09-26T07:03:52.000Z</published>
-    <updated>2016-09-26T07:06:15.436Z</updated>
+    <updated>2016-09-26T07:29:20.073Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;Spring-Mybatis-JSON&quot;&gt;&lt;a href=&quot;#Spring-Mybatis-JSON&quot; class=&quot;headerlink&quot; title=&quot;Spring-Mybatis-JSON&quot;&gt;&lt;/a&gt;Spring-Mybatis-JSON&lt;/h2&gt;</content>
+    <content type="html">&lt;h2 id=&quot;Spring-Mybatis-JSON&quot;&gt;&lt;a href=&quot;#Spring-Mybatis-JSON&quot; class=&quot;headerlink&quot; title=&quot;Spring-Mybatis-JSON&quot;&gt;&lt;/a&gt;Spring-Mybatis-JSON&lt;/h2&gt;&lt;p&gt;Spring&amp;#x7248;&amp;#x672C;&amp;#x662F;4.3.2&amp;#xFF0C;&amp;#x5728;&amp;#x7528;@ResponseBody&amp;#x6807;&amp;#x6CE8;&amp;#x8FD4;&amp;#x56DE;json&amp;#x683C;&amp;#x5F0F;&amp;#x65F6;&amp;#x5019;&amp;#x9047;&amp;#x5230;&amp;#x8FD9;&amp;#x6837;&amp;#x7684;&amp;#x9519;&amp;#x8BEF;&amp;#xFF1A;&amp;#x201C;The resource identified by this request is only capable of generating responses with characteristics not acceptable according to the request &amp;#x201C;accept&amp;#x201D; headers.&amp;#x201D;&amp;#x3002;&lt;/p&gt;
+&lt;p&gt;&amp;#x89E3;&amp;#x51B3;&amp;#x529E;&amp;#x6CD5;&amp;#xFF1A;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/Nvm2Y3e&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&amp;#x53C2;&amp;#x8003;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h4 id=&quot;gradle-require&quot;&gt;&lt;a href=&quot;#gradle-require&quot; class=&quot;headerlink&quot; title=&quot;gradle require&quot;&gt;&lt;/a&gt;gradle require&lt;/h4&gt; &lt;figure class=&quot;highlight gradle&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;apos;com.fasterxml.jackson.core:jackson-core:2.8.2&amp;apos;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;apos;com.fasterxml.jackson.core:jackson-databind:2.8.2&amp;apos;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;apos;com.fasterxml.jackson.core:jackson-annotations:2.8.2&amp;apos;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;apos;org.codehaus.jackson:jackson-core-asl:1.9.13&amp;apos;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;apos;org.codehaus.jackson:jackson-mapper-asl:1.9.13&amp;apos;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;xml-config&quot;&gt;&lt;a href=&quot;#xml-config&quot; class=&quot;headerlink&quot; title=&quot;xml config&quot;&gt;&lt;/a&gt;xml config&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;note: &lt;code&gt;&amp;lt;mvc:annotation-driven /&amp;gt;&lt;/code&gt; must be after &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;bean&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping&amp;quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;bean&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;messageConverters&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;list&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;bean&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;org.springframework.http.converter.json.MappingJackson2HttpMessageConverter&amp;quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;list&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;bean&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;mvc:annotation-driven&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Spring-Mybatis-JSON&quot;&gt;&lt;a href=&quot;#Spring-Mybatis-JSON&quot; class=&quot;headerlink&quot; title=&quot;Spring-Mybatis-JSON&quot;&gt;&lt;/a&gt;Spring-Mybatis-JSON&lt;/h2&gt;
+      &lt;h2 id=&quot;Spring-Mybatis-JSON&quot;&gt;&lt;a href=&quot;#Spring-Mybatis-JSON&quot; class=&quot;headerlink&quot; title=&quot;Spring-Mybatis-JSON&quot;&gt;&lt;/a&gt;Spring-Mybatis-JSON&lt;/h2&gt;&lt;p&gt;Spring&amp;#x7248;&amp;#x672C;&amp;#x662F;4.3.2&amp;#xFF0C;&amp;#x5728;&amp;#x7528;@ResponseBody&amp;#x6807;&amp;#x6CE8;&amp;#x8FD4;&amp;#x56DE;json&amp;#x683C;&amp;#x5F0F;&amp;#x65F6;&amp;#x5019;&amp;#x9047;&amp;#x5230;&amp;#x8FD9;&amp;#x6837;&amp;#x7684;&amp;#x9519;&amp;#x8BEF;&amp;#xFF1A;&amp;#x201C;The resource identified by this request is only capable of generating responses with characteristics not acceptable according to the request &amp;#x201C;accept&amp;#x201D; headers.&amp;#x201D;&amp;#x3002;&lt;/p&gt;
+&lt;p&gt;&amp;#x89E3;&amp;#x51B3;&amp;#x529E;&amp;#x6CD5;&amp;#xFF1A;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/Nvm2Y3e&quot;&gt;&amp;#x53C2;&amp;#x8003;&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+      <category term="Mybatis" scheme="http://yoursite.com/tags/Mybatis/"/>
+    
+      <category term="JSON" scheme="http://yoursite.com/tags/JSON/"/>
     
   </entry>
   
