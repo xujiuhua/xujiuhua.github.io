@@ -1545,7 +1545,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #98ff44;
+  background: #207dff;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2083,7 +2083,7 @@ a.search-result {
   overflow: hidden;
 }
 body {
-  background: #f5f7f9;
+  background: url("/images/bg.jpg") fixed;
 }
 @media (min-width: 992px) {
   .full-image.full-image.full-image {
