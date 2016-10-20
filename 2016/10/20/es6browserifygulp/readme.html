@@ -1,0 +1,129 @@
+<h1 id="Browserify-Es6-Gulp集成使用"><a href="#Browserify-Es6-Gulp集成使用" class="headerlink" title="Browserify Es6 Gulp集成使用"></a>Browserify Es6 Gulp集成使用</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="Browserify"><a href="#Browserify" class="headerlink" title="Browserify"></a>Browserify</h3><p><a href="http://browserify.org/">http://browserify.org/</a></p>
+<blockquote>
+<p>npm上有许多资源和第三方库，但是只能在node端使用，所以Browserify就是在浏览器端写node代码，然后转换为浏览器端使用。</p>
+</blockquote>
+<p>Browsers don’t have the require method defined, but Node.js does. With Browserify you can write code that uses require in the same way that you would use it in Node.</p>
+<p>浏览器没有定义<code>require</code>方法，但是node.js有。使用<code>Browserify</code>能在浏览器端写代码使用<code>require</code>方法就同在<code>Node</code>上</p>
+<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><p><a href="http://es6.ruanyifeng.com/">http://es6.ruanyifeng.com/</a></p>
+<blockquote>
+<p>ECMAScript 6.0（以下简称ES6）是JavaScript语言的下一代标准，已经在2015年6月正式发布了。它的目标，是使得JavaScript语言可以用来编写复杂的大型应用程序，成为企业级开发语言。</p>
+</blockquote>
+<h3 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h3><p><a href="http://gulpjs.com/">http://gulpjs.com/</a></p>
+<blockquote>
+<p>用自动化构建工具增强你的工作流程！</p>
+</blockquote>
+<h2 id="Browserify、Es6、Gulp关系"><a href="#Browserify、Es6、Gulp关系" class="headerlink" title="Browserify、Es6、Gulp关系"></a>Browserify、Es6、Gulp关系</h2><p>首先我们要使用ES6语法，但是现在浏览器支持不完全，所以需要使用Babel把ES6转换为ES5语法，Babel也可以用于浏览器环境。但是，从Babel 6.0开始，不再直接提供浏览器版本，而是要用构建工具构建出来，Gulp就是一款构建工具。</p>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><blockquote>
+<p>前提是必须了解Browserify、Es6、Gulp的一些本实使用</p>
+</blockquote>
+<h3 id="1、工程目录"><a href="#1、工程目录" class="headerlink" title="1、工程目录"></a>1、工程目录</h3><ul>
+<li><code>npm init -y</code> 初始化</li>
+<li>创建 <code>gulpfile.js</code> 文件</li>
+</ul>
+<p><img src="blog-img/project-category-1.png"/></p>
+<h3 id="2、编写js"><a href="#2、编写js" class="headerlink" title="2、编写js"></a>2、编写js</h3><p>import.js</p>
+<pre><code class="es6">let sum = (a, b = 6) =&gt; (a + b);
+
+let square = (b) =&gt; {
+    return b * b;
+};
+
+let variable = 8;
+
+class MyClass {
+    constructor(credentials) {
+        this.name = credentials.name;
+        this.enrollmentNo = credentials.enrollmentNo
+    }
+    getName() {
+        return this.name;
+    }
+}
+
+export { sum, square, variable, MyClass };
+</code></pre>
+<p>index.js</p>
+<pre><code class="es6">import {sum, square, variable, MyClass} from &apos;./import&apos;;
+
+// 17
+console.log(sum(10,7));
+
+// 25
+console.log(square(5));
+
+let cred = {
+    name: &apos;Johuer&apos;,
+    age: 30
+}
+
+let x = new MyClass(cred);
+
+//Johuer
+console.log(x.getName());
+</code></pre>
+<h3 id="3、编写gulp-js"><a href="#3、编写gulp-js" class="headerlink" title="3、编写gulp.js"></a>3、编写gulp.js</h3><pre><code class="js"><span class="keyword">const</span> gulp          = <span class="built_in">require</span>( <span class="string">'gulp'</span> );
+<span class="keyword">const</span> browserify    = <span class="built_in">require</span>( <span class="string">"browserify"</span> );
+<span class="keyword">const</span> source        = <span class="built_in">require</span>( <span class="string">'vinyl-source-stream'</span> );  
+<span class="keyword">const</span> babelify      = <span class="built_in">require</span>( <span class="string">"babelify"</span> );            <span class="comment">//es6转es5</span>
+
+gulp.task(<span class="string">'es6'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{  
+<span class="keyword">return</span> browserify(<span class="string">'./src/js/index.js'</span>)
+    .transform(babelify, {
+        presets: [<span class="string">"es2015"</span>]
+    })
+    .bundle()
+    .pipe(source(<span class="string">'bundle.js'</span>)) <span class="comment">// gives streaming vinyl file object</span>
+    .pipe(gulp.dest(<span class="string">'dist'</span>));
+});
+</code></pre>
+<h3 id="4、npm下载全部依赖"><a href="#4、npm下载全部依赖" class="headerlink" title="4、npm下载全部依赖"></a>4、npm下载全部依赖</h3><pre><code class="cmd">$ npm i --save-dev gulp
+$ npm i --save-dev browserify
+$ npm i --save-dev babelify
+$ npm i --save-dev vinyl-source-stream
+$ npm i --save-dev babel-preset-es2015
+</code></pre>
+<h3 id="5、执行gulp命令"><a href="#5、执行gulp命令" class="headerlink" title="5、执行gulp命令"></a>5、执行gulp命令</h3><p><code>gulp es6</code></p>
+<p><img src="blog-img/gulp.png"/></p>
+<p><img src="blog-img/project-category-2.png"/></p>
+<h3 id="6、编写index-html"><a href="#6、编写index-html" class="headerlink" title="6、编写index.html"></a>6、编写index.html</h3><pre><code class="html"><span class="meta">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="name">html</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">head</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">body</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"dist/bundle.js"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">html</span>&gt;</span>
+</code></pre>
+<h3 id="7、浏览器运行"><a href="#7、浏览器运行" class="headerlink" title="7、浏览器运行"></a>7、浏览器运行</h3><p><img src="blog-img/result.png"/></p>
+<h2 id="Node模块加载"><a href="#Node模块加载" class="headerlink" title="Node模块加载"></a>Node模块加载</h2><p>第一种方法</p>
+<pre><code class="es6">import unique from &apos;uniq&apos;;
+</code></pre>
+<p>第二种方法</p>
+<pre><code class="es6">var unique = require(&apos;uniq&apos;);
+</code></pre>
+<p>两种方法都可以使用。</p>
+<p>index.js</p>
+<pre><code class="js"><span class="keyword">import</span> {sum, square, variable, MyClass} <span class="keyword">from</span> <span class="string">'./import'</span>;    <span class="comment">// 自定义</span>
+
+<span class="keyword">import</span> unique <span class="keyword">from</span> <span class="string">'uniq'</span>; <span class="comment">//var unique = require('uniq');    // node模块</span>
+<span class="keyword">var</span> data = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">6</span>];
+<span class="built_in">console</span>.log(unique(data));
+
+<span class="comment">// 17</span>
+<span class="built_in">console</span>.log(sum(<span class="number">10</span>,<span class="number">7</span>));
+
+<span class="comment">// 25</span>
+<span class="built_in">console</span>.log(square(<span class="number">5</span>));
+
+<span class="keyword">let</span> cred = {
+    name: <span class="string">'Johuer'</span>,
+    age: <span class="number">30</span>
+}
+
+<span class="keyword">let</span> x = <span class="keyword">new</span> MyClass(cred);
+
+<span class="comment">//Johuer</span>
+<span class="built_in">console</span>.log(x.getName());
+</code></pre>
