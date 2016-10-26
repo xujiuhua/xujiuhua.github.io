@@ -280,7 +280,7 @@
 
       
         <h1 id="&#x52A8;&#x6001;&#x64CD;&#x4F5C;js"><a href="#&#x52A8;&#x6001;&#x64CD;&#x4F5C;js" class="headerlink" title="&#x52A8;&#x6001;&#x64CD;&#x4F5C;js"></a>&#x52A8;&#x6001;&#x64CD;&#x4F5C;js</h1><h2 id="&#x52A8;&#x6001;&#x52A0;&#x8F7D;"><a href="#&#x52A8;&#x6001;&#x52A0;&#x8F7D;" class="headerlink" title="&#x52A8;&#x6001;&#x52A0;&#x8F7D;"></a>&#x52A8;&#x6001;&#x52A0;&#x8F7D;</h2><p>&#x5728;&#x9700;&#x8981;&#x52A0;&#x8F7D;js&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x76F4;&#x63A5;&#x5199;&#x5165;&#x4E00;&#x4E0B;&#x4EE3;&#x7801;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.write(<span class="string">&apos;&lt;script src=&quot;js/jquery-3.0.0.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;\/script&gt;&apos;</span>);</span><br></pre></td></tr></table></figure></p>
-<p>Example:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot; /&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">        window.jQuery || document.write(&apos;&lt;script src=&quot;js/jquery-3.0.0.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;\/script&gt;&apos;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;js/jquery.jsonp.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></p>
+<p>Example:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="xml"></span><br><span class="line">        window.jQuery || document.write(&apos;<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/jquery-3.0.0.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span><span class="xml"><span class="tag">&lt;<span class="name">\</span>/<span class="attr">script</span>&gt;</span>&apos;);</span><br><span class="line">    </span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/jquery.jsonp.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <a id="more"></a>
 <h2 id="&#x52A8;&#x6001;&#x66F4;&#x6539;"><a href="#&#x52A8;&#x6001;&#x66F4;&#x6539;" class="headerlink" title="&#x52A8;&#x6001;&#x66F4;&#x6539;"></a>&#x52A8;&#x6001;&#x66F4;&#x6539;</h2><p><code>&lt;script src=&apos;&apos; id=&quot;s1&quot;&gt;&lt;/script&gt;</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">document</span>.getElementById(<span class="string">&quot;s1&quot;</span>);</span><br><span class="line">s1.src = <span class="string">&quot;js/jquery-3.0.0.js&quot;</span>;</span><br></pre></td></tr></table></figure></p>
@@ -392,7 +392,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -400,7 +400,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -409,7 +409,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
