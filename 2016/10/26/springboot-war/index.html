@@ -75,7 +75,7 @@ JDK8&amp;#x3001;IDEA&amp;#x3001;SpringBoot&amp;#x3001;Gradle">
 <meta property="og:image" content="http://yoursite.com/2016/10/26/springboot-war/tomcat-war.png">
 <meta property="og:image" content="http://yoursite.com/2016/10/26/springboot-war/tomcat-info.png">
 <meta property="og:image" content="http://yoursite.com/2016/10/26/springboot-war/result.png">
-<meta property="og:updated_time" content="2016-11-06T14:23:25.104Z">
+<meta property="og:updated_time" content="2016-11-06T14:32:25.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot 创建 war">
 <meta name="twitter:description" content="&amp;#x53C2;&amp;#x770B;&amp;#x6587;&amp;#x6863;Create a deployable war file
@@ -307,23 +307,12 @@ JDK8&amp;#x3001;IDEA&amp;#x3001;SpringBoot&amp;#x3001;Gradle">
 </blockquote>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">&apos;java&apos;</span></span><br><span class="line">apply plugin: <span class="string">&apos;eclipse&apos;</span></span><br><span class="line">apply plugin: <span class="string">&apos;spring-boot&apos;</span></span><br><span class="line">apply plugin: <span class="string">&apos;war&apos;</span></span><br><span class="line"></span><br><span class="line">war {</span><br><span class="line">	baseName = <span class="string">&apos;SpringBootWar&apos;</span></span><br><span class="line">	version = <span class="string">&apos;0.0.1-SNAPSHOT&apos;</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <h3 id="&#x6807;&#x8BB0;&#x5185;&#x7F6E;&#x5BB9;&#x5668;-tomcat-&#x4E3A;-provided"><a href="#&#x6807;&#x8BB0;&#x5185;&#x7F6E;&#x5BB9;&#x5668;-tomcat-&#x4E3A;-provided" class="headerlink" title="&#x6807;&#x8BB0;&#x5185;&#x7F6E;&#x5BB9;&#x5668; tomcat &#x4E3A; provided"></a>&#x6807;&#x8BB0;&#x5185;&#x7F6E;&#x5BB9;&#x5668; <code>tomcat</code> &#x4E3A; provided</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> {</span><br><span class="line">    <span class="comment">// &#x2026;</span></span><br><span class="line">    providedRuntime <span class="string">&apos;org.springframework.boot:spring-boot-starter-tomcat&apos;</span></span><br><span class="line">    <span class="comment">// &#x2026;</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-<ul>
-<li>&#x6267;&#x884C; gradle &#x4E2D; <code>build</code></li>
-</ul>
-<p><img src="/2016/10/26/springboot-war/task.png"></p>
+<h3 id="&#x6267;&#x884C;-gradle-&#x4E2D;-build"><a href="#&#x6267;&#x884C;-gradle-&#x4E2D;-build" class="headerlink" title="&#x6267;&#x884C; gradle &#x4E2D; build"></a>&#x6267;&#x884C; gradle &#x4E2D; <code>build</code></h3><p><img src="/2016/10/26/springboot-war/task.png"></p>
 <p><img src="/2016/10/26/springboot-war/war.png"></p>
-<ul>
-<li>war&#x5305;&#x653E;&#x5165;tomcat <code>webapp</code> &#x4E2D;</li>
-</ul>
+<h3 id="&#x90E8;&#x7F72;-tomcat"><a href="#&#x90E8;&#x7F72;-tomcat" class="headerlink" title="&#x90E8;&#x7F72; tomcat"></a>&#x90E8;&#x7F72; <code>tomcat</code></h3><p>war&#x5305;&#x653E;&#x5165;tomcat <code>webapp</code> &#x4E2D;</p>
 <p><img src="/2016/10/26/springboot-war/tomcat-war.png"></p>
-<ul>
-<li>&#x542F;&#x52A8;<code>tomcat</code></li>
-</ul>
 <p><img src="/2016/10/26/springboot-war/tomcat-info.png"></p>
-<ul>
-<li>&#x7ED3;&#x679C;</li>
-</ul>
-<blockquote>
+<h3 id="&#x7ED3;&#x679C;"><a href="#&#x7ED3;&#x679C;" class="headerlink" title="&#x7ED3;&#x679C;"></a>&#x7ED3;&#x679C;</h3><blockquote>
 <p>&#x8BF7;&#x6C42;&#x5730;&#x5740;&#x9700;&#x8981;&#x52A0;&#x4E0A;&#x9879;&#x76EE;&#x89E3;&#x538B;&#x540E;&#x7684;&#x9879;&#x76EE;&#x540D;&#x79F0;:localhost:8080/SpringBootWar-0.0.1-SNAPSHOT/demo1,&#x5982;&#x679C;&#x60F3;&#x90E8;&#x7F72;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x76F4;&#x63A5;&#x628A;&#x5185;&#x5BB9;&#x526A;&#x5207;&#x5230;ROOT&#x4E0B;</p>
 </blockquote>
 <p><img src="/2016/10/26/springboot-war/result.png"></p>
@@ -503,7 +492,7 @@ JDK8&amp;#x3001;IDEA&amp;#x3001;SpringBoot&amp;#x3001;Gradle">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参看文档"><span class="nav-number">1.</span> <span class="nav-text">参看文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构"><span class="nav-number">3.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">4.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主类继承-SpringBootServletInitializer"><span class="nav-number">4.1.</span> <span class="nav-text">主类继承 SpringBootServletInitializer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目支持-war"><span class="nav-number">4.2.</span> <span class="nav-text">项目支持 war</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记内置容器-tomcat-为-provided"><span class="nav-number">4.3.</span> <span class="nav-text">标记内置容器 tomcat 为 provided</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参看文档"><span class="nav-number">1.</span> <span class="nav-text">参看文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构"><span class="nav-number">3.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">4.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主类继承-SpringBootServletInitializer"><span class="nav-number">4.1.</span> <span class="nav-text">主类继承 SpringBootServletInitializer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目支持-war"><span class="nav-number">4.2.</span> <span class="nav-text">项目支持 war</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记内置容器-tomcat-为-provided"><span class="nav-number">4.3.</span> <span class="nav-text">标记内置容器 tomcat 为 provided</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-gradle-中-build"><span class="nav-number">4.4.</span> <span class="nav-text">执行 gradle 中 build</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署-tomcat"><span class="nav-number">4.5.</span> <span class="nav-text">部署 tomcat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果"><span class="nav-number">4.6.</span> <span class="nav-text">结果</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
