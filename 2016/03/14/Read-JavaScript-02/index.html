@@ -60,12 +60,14 @@
 
 
 <meta name="description" content="ECMAScript&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#x3000;&amp;#x3000;5&amp;#x79CD;&amp;#x7B80;&amp;#x5355;&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#xFF08;&amp;#x4E5F;&amp;#x79F0;&amp;#x4E3A;&amp;#x57FA;&amp;#x672C;&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#xFF">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Read JavaScript-02">
 <meta property="og:url" content="http://yoursite.com/2016/03/14/Read-JavaScript-02/index.html">
-<meta property="og:site_name" content="Johuer's Blog">
+<meta property="og:site_name" content="Johuer&#39;s Blog">
 <meta property="og:description" content="ECMAScript&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#x3000;&amp;#x3000;5&amp;#x79CD;&amp;#x7B80;&amp;#x5355;&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#xFF08;&amp;#x4E5F;&amp;#x79F0;&amp;#x4E3A;&amp;#x57FA;&amp;#x672C;&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#xFF">
-<meta property="og:updated_time" content="2016-03-15T07:20:51.941Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-03-15T07:20:51.942Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Read JavaScript-02">
 <meta name="twitter:description" content="ECMAScript&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#x3000;&amp;#x3000;5&amp;#x79CD;&amp;#x7B80;&amp;#x5355;&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#xFF08;&amp;#x4E5F;&amp;#x79F0;&amp;#x4E3A;&amp;#x57FA;&amp;#x672C;&amp;#x6570;&amp;#x636E;&amp;#x7C7B;&amp;#x578B;&amp;#xFF">
@@ -319,7 +321,7 @@
 <p>&#x516B;&#x8FDB;&#x5236;&#xFF0C;&#x7B2C;&#x4E00;&#x4F4D;&#x5FC5;&#x987B;&#x662F;0&#xFF0C;&#x7136;&#x540E;&#x662F;&#x516B;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x5E8F;&#x5217;&#xFF08;0~7&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x5B57;&#x9762;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x8D85;&#x51FA;&#x4E86;&#x8303;&#x56F4;&#xFF0C;&#x90A3;&#x4E48;&#x524D;&#x5BFC;0&#x5C06;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x6570;&#x5B57;&#x88AB;&#x5F53;&#x505A;&#x5341;&#x8FDB;&#x5236;&#x89E3;&#x6790;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="number">070</span>); <span class="comment">// &#x516B;&#x8FDB;&#x5236;&#x7684;56</span></span><br><span class="line">alert(<span class="number">079</span>); <span class="comment">// &#x65E0;&#x6548;&#x7684;&#x516B;&#x8FDB;&#x5236;&#xFF0C;&#x89E3;&#x6790;&#x4E3A;79</span></span><br></pre></td></tr></table></figure></p>
 <p>&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF0C;&#x524D;&#x9762;&#x4E24;&#x4F4D;&#x5FC5;&#x987B;&#x662F;0x,&#x540E;&#x8DDF;&#xFF08;0~9&#x6216;A~F),&#x5176;&#x4E2D;&#x5B57;&#x6BCD;A~F&#x53EF;&#x5927;&#x5199;&#x4E5F;&#x53EF;&#x5C0F;&#x5199;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hexNum1 = <span class="number">0xA</span>; <span class="comment">// &#x5341;&#x516D;&#x8FDB;&#x5236;10</span></span><br><span class="line"><span class="keyword">var</span> hexNum2 = <span class="number">0x1f</span>; <span class="comment">// &#x5341;&#x516D;&#x8FDB;&#x5236;31</span></span><br></pre></td></tr></table></figure></p>
 <p>&#x5728;&#x8FDB;&#x884C;&#x7B97;&#x6570;&#x8BA1;&#x7B97;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x516B;&#x8FDB;&#x5236;&#x548C;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x90FD;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x5341;&#x8FDB;&#x5236;&#x6570;&#x503C;&#x3002;</p>
-<ol>
+<ol start="2">
 <li>&#x6D6E;&#x70B9;&#x6570;</li>
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> floatNum = <span class="number">3.125e7</span>; <span class="comment">// 31250000&#xFF08;3.125*10^7);</span></span><br><span class="line">--------------------------------------</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">0.1</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">0.2</span>;</span><br><span class="line">alert(a + b); <span class="comment">// 0.30000000000000004</span></span><br></pre></td></tr></table></figure>
@@ -327,7 +329,7 @@
 <p>&#x6C38;&#x8FDC;&#x4E0D;&#x8981;&#x6D4B;&#x8BD5;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x6D6E;&#x70B9;&#x6570;&#x503C;&#x3002;</p>
 </blockquote>
 <p>&#x8303;&#x56F4;&#xFF1A;<br>Number.MIN_VALUE:5e-324<br>Number.MAX_VALUE:1.7976931348623157e+308</p>
-<ol>
+<ol start="3">
 <li>NaN</li>
 </ol>
 <p>(Not a Number),&#x6709;&#x4E24;&#x4E2A;&#x975E;&#x540C;&#x5BFB;&#x5E38;&#x7684;&#x7279;&#x70B9;&#xFF1A;</p>
@@ -336,7 +338,7 @@
 <li>NaN&#x4E0E;&#x4EFB;&#x4F55;&#x503C;&#x90FD;&#x4E0D;&#x76F8;&#x7B49;&#xFF0C;&#x5305;&#x62EC;NaN</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="built_in">isNaN</span>(<span class="literal">NaN</span>)); <span class="comment">//true</span></span><br><span class="line">alert(<span class="built_in">isNaN</span>(<span class="number">10</span>)); <span class="comment">//false</span></span><br><span class="line">alert(<span class="built_in">isNaN</span>(<span class="string">&quot;10&quot;</span>)); <span class="comment">//false&#xFFFD;</span></span><br><span class="line">alert(<span class="built_in">isNaN</span>(<span class="string">&quot;blue&quot;</span>)); <span class="comment">//true</span></span><br><span class="line">alert(<span class="built_in">isNaN</span>(<span class="literal">true</span>)); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="4">
 <li>&#x6570;&#x503C;&#x8F6C;&#x6362;</li>
 </ol>
 <p><code>Number()&#x3001;parseInt()&#x3001;parseFloat()</code><br>Number()&#x53EF;&#x7528;&#x4E8E;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x7C7B;&#x578B;</p>
@@ -351,7 +353,7 @@
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> text = <span class="string">&quot;This is the letter sigma: \u03a3.&quot;</span>;</span><br><span class="line">alert(text.length);<span class="comment">// 28&#xFFFD;</span></span><br></pre></td></tr></table></figure>
 <p>&#x6709;28&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5176;&#x4E2D;6&#x4E2A;&#x5B57;&#x7B26;&#x957F;&#x7684;&#x8F6C;&#x4E49;&#x5E8F;&#x5217;<code>\u03a3</code>&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;</p>
-<ol>
+<ol start="2">
 <li><p>&#x5B57;&#x7B26;&#x4E32;&#x7279;&#x70B9;<br>&#x3000;&#x3000;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7684;</p>
 </li>
 <li><p>&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;<br>&#x3000;&#x3000;toString(),null&#x548C;undefined&#x65E0;&#x6B64;&#x65B9;&#x6CD5;&#x3002;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0D;&#x4F20;&#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x5728;&#x8C03;&#x7528;&#x6570;&#x503C;&#x7684;toString()&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x8868;&#x793A;&#x8FDB;&#x5236;&#x7684;&#x53C2;&#x6570;</p>
@@ -555,7 +557,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

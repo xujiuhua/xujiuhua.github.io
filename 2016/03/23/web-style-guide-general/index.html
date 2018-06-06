@@ -59,22 +59,17 @@
 
 
 
-<meta name="description" content="&amp;#x9002;&amp;#x7528;&amp;#x8303;&amp;#x56F4; HTML, Javascript and CSS / SCSS
-
-&amp;#x6587;&amp;#x4EF6; / &amp;#x8D44;&amp;#x6E90;&amp;#x540D;&amp;#x79F0;&amp;#x5728;&amp;#x540C;&amp;#x4E00;&amp;#x4E2A;web&amp;#x5DE5;&amp;#x7A0B;&amp;#x4E2D;&amp;#x7684;&amp;#x6240;&amp;#x6709;">
+<meta name="description" content="&amp;#x9002;&amp;#x7528;&amp;#x8303;&amp;#x56F4; HTML, Javascript and CSS / SCSS  &amp;#x6587;&amp;#x4EF6; / &amp;#x8D44;&amp;#x6E90;&amp;#x540D;&amp;#x79F0;&amp;#x5728;&amp;#x540C;&amp;#x4E00;&amp;#x4E2A;web&amp;#x5DE5;&amp;#x7A0B;&amp;#x4E2D;&amp;#x7684;&amp;#x6240;&amp;#x6709;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端编码规范(1/4)-通用规范">
+<meta property="og:title" content="前端编码规范(1&#x2F;4)-通用规范">
 <meta property="og:url" content="http://yoursite.com/2016/03/23/web-style-guide-general/index.html">
-<meta property="og:site_name" content="Johuer's Blog">
-<meta property="og:description" content="&amp;#x9002;&amp;#x7528;&amp;#x8303;&amp;#x56F4; HTML, Javascript and CSS / SCSS
-
-&amp;#x6587;&amp;#x4EF6; / &amp;#x8D44;&amp;#x6E90;&amp;#x540D;&amp;#x79F0;&amp;#x5728;&amp;#x540C;&amp;#x4E00;&amp;#x4E2A;web&amp;#x5DE5;&amp;#x7A0B;&amp;#x4E2D;&amp;#x7684;&amp;#x6240;&amp;#x6709;">
-<meta property="og:updated_time" content="2016-03-23T09:48:16.665Z">
+<meta property="og:site_name" content="Johuer&#39;s Blog">
+<meta property="og:description" content="&amp;#x9002;&amp;#x7528;&amp;#x8303;&amp;#x56F4; HTML, Javascript and CSS / SCSS  &amp;#x6587;&amp;#x4EF6; / &amp;#x8D44;&amp;#x6E90;&amp;#x540D;&amp;#x79F0;&amp;#x5728;&amp;#x540C;&amp;#x4E00;&amp;#x4E2A;web&amp;#x5DE5;&amp;#x7A0B;&amp;#x4E2D;&amp;#x7684;&amp;#x6240;&amp;#x6709;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-03-23T09:48:16.666Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端编码规范(1/4)-通用规范">
-<meta name="twitter:description" content="&amp;#x9002;&amp;#x7528;&amp;#x8303;&amp;#x56F4; HTML, Javascript and CSS / SCSS
-
-&amp;#x6587;&amp;#x4EF6; / &amp;#x8D44;&amp;#x6E90;&amp;#x540D;&amp;#x79F0;&amp;#x5728;&amp;#x540C;&amp;#x4E00;&amp;#x4E2A;web&amp;#x5DE5;&amp;#x7A0B;&amp;#x4E2D;&amp;#x7684;&amp;#x6240;&amp;#x6709;">
+<meta name="twitter:title" content="前端编码规范(1&#x2F;4)-通用规范">
+<meta name="twitter:description" content="&amp;#x9002;&amp;#x7528;&amp;#x8303;&amp;#x56F4; HTML, Javascript and CSS / SCSS  &amp;#x6587;&amp;#x4EF6; / &amp;#x8D44;&amp;#x6E90;&amp;#x540D;&amp;#x79F0;&amp;#x5728;&amp;#x540C;&amp;#x4E00;&amp;#x4E2A;web&amp;#x5DE5;&amp;#x7A0B;&amp;#x4E2D;&amp;#x7684;&amp;#x6240;&amp;#x6709;">
 
 
 
@@ -291,10 +286,10 @@
 <h3 id="&#x6CE8;&#x91CA;"><a href="#&#x6CE8;&#x91CA;" class="headerlink" title="&#x6CE8;&#x91CA;"></a>&#x6CE8;&#x91CA;</h3><p>&#x5F53;&#x6CE8;&#x91CA;&#x65F6;&#xFF0C;&#x4E0D;&#x662F;&#x5199;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x800C;&#x8981;&#x5199;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x4E3A;&#x4EC0;&#x4E48;&#xFF0C;&#x5E76;&#x4E14;&#x5199;&#x4E0A;&#x60F3;&#x6CD5;&#xFF0C;&#x5F53;&#x7136;&#x6700;&#x597D;&#x5E26;&#x4E0A;&#x4F60;&#x7684;&#x53C2;&#x7167;&#x94FE;&#x63A5;&#x5730;&#x5740;&#x7B49;&#x7B49;&#x3002;</p>
 <p><strong>Bad</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var offset = 0;</span><br><span class="line"></span><br><span class="line">if(includeLabels) {</span><br><span class="line">  // Add offset of 20</span><br><span class="line">  offset = 20;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
 <p><strong>Good</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var offset = 0;</span><br><span class="line"></span><br><span class="line">if(includeLabels) {</span><br><span class="line">  // If the labels are included we need to have a minimum offset of 20 pixels</span><br><span class="line">  // We need to set it explicitly because of the following bug: http://somebrowservendor.com/issue-tracker/ISSUE-1</span><br><span class="line">  offset = 20;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://usejsdoc.org/" target="_blank" rel="external">JSDoc</a> or <a href="http://yui.github.io/yuidoc/" target="_blank" rel="external">YUIDoc</a></p>
+<p><a href="http://usejsdoc.org/" target="_blank" rel="noopener">JSDoc</a> or <a href="http://yui.github.io/yuidoc/" target="_blank" rel="noopener">YUIDoc</a></p>
 <hr>
 <h3 id="&#x4EE3;&#x7801;&#x6821;&#x9A8C;"><a href="#&#x4EE3;&#x7801;&#x6821;&#x9A8C;" class="headerlink" title="&#x4EE3;&#x7801;&#x6821;&#x9A8C;"></a>&#x4EE3;&#x7801;&#x6821;&#x9A8C;</h3><p>&#x5BF9;&#x4E8E;JavaScript&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; JSLint / JSHint&#x6821;&#x9A8C;&#x9879;&#x76EE;&#x89C4;&#x5219;</p>
-<p><a href="https://github.com/gionkunz/chartist-js/blob/develop/CODINGSTYLE.md" target="_blank" rel="external">&#x539F;&#x6587;</a></p>
+<p><a href="https://github.com/gionkunz/chartist-js/blob/develop/CODINGSTYLE.md" target="_blank" rel="noopener">&#x539F;&#x6587;</a></p>
 
       
     </div>
@@ -483,7 +478,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
