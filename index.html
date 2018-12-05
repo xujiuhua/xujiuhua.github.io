@@ -214,6 +214,167 @@
             
               
                 
+                <a class="post-title-link" href="/2018/12/05/read-java-alibaba-01/" itemprop="url">
+                  码出高效java开发手册-小结01
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-12-05T16:20:31+08:00" content="2018-12-05">
+              2018-12-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/12/05/read-java-alibaba-01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/12/05/read-java-alibaba-01/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0E;&#x96C6;&#x5408;"><a href="#&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0E;&#x96C6;&#x5408;" class="headerlink" title="&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0E;&#x96C6;&#x5408;"></a>&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0E;&#x96C6;&#x5408;</h3><h4 id="&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5206;&#x7C7B;"><a href="#&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5206;&#x7C7B;" class="headerlink" title="&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5206;&#x7C7B;"></a>&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5206;&#x7C7B;</h4><table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x7EBF;&#x6027;&#x7ED3;&#x6784;</td>
+<td>0&#x81F3;1&#x4E2A;&#x76F4;&#x63A5;&#x524D;&#x7EE7;&#x548C;&#x76F4;&#x63A5;&#x540E;&#x7EE7;&#xFF1B;&#x987A;&#x5E8F;&#x8868;&#x3001;&#x94FE;&#x8868;&#x3001;&#x6808;&#x3001;&#x961F;&#x5217; &#x3002;note&#xFF1A;&#x6808;&#x3001;&#x961F;&#x5217;&#x8BBF;&#x95EE;&#x53D7;&#x9650;</td>
+</tr>
+<tr>
+<td>&#x6811;&#x7ED3;&#x6784;</td>
+<td>0&#x81F3;1&#x4E2A;&#x76F4;&#x63A5;&#x524D;&#x7EE7;&#x548C;0&#x81F3;n&#x4E2A;&#x76F4;&#x63A5;&#x540E;&#x7EE7;&#xFF08;n&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;2&#xFF09;</td>
+</tr>
+<tr>
+<td>&#x56FE;&#x7ED3;&#x6784;</td>
+<td>&#x7B80;&#x5355;&#x56FE;&#x3001;&#x591A;&#x91CD;&#x56FE;&#x3001;&#x6709;&#x5411;&#x56FE;&#x3001;&#x65E0;&#x5411;&#x56FE;</td>
+</tr>
+<tr>
+<td>&#x54C8;&#x5E0C;&#x7ED3;&#x6784;</td>
+<td>&#x7D22;&#x5F15;&#x548C;&#x503C;&#x5B58;&#x50A8;&#xFF0C;&#x67E5;&#x627E;&#x6548;&#x7387;&#x9AD8;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x6392;&#x5E8F;"><a href="#&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x6392;&#x5E8F;" class="headerlink" title="&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x6392;&#x5E8F;"></a>&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6;&#x6392;&#x5E8F;</h4><p>&#x4ECE;&#x6700;&#x597D;&#x5230;&#x6700;&#x574F;&#xFF1A;&#x5E38;&#x6570;&#x7EA7;O(1)&#x3001;&#x5BF9;&#x6570;&#x7EA7;O(log<sub>n</sub>)&#x3001;&#x7EBF;&#x6027;&#x7EA7;O(n)&#x3001;&#x7EBF;&#x6027;&#x5BF9;&#x6570;&#x7EA7;O(nlog<sub>n</sub>)&#x3001;&#x5E73;&#x65B9;&#x7EA7;O(n<sup>2</sup>)&#x3001;&#x7ACB;&#x65B9;&#x7EA7;O(<sup>3</sup>)&#x3001;&#x6307;&#x6570;&#x7EA7;O(2<sup>n</sup> )&#x7B49;</p>
+<h4 id="&#x96C6;&#x5408;&#x6846;&#x67B6;"><a href="#&#x96C6;&#x5408;&#x6846;&#x67B6;" class="headerlink" title="&#x96C6;&#x5408;&#x6846;&#x67B6;"></a>&#x96C6;&#x5408;&#x6846;&#x67B6;</h4><p>Collection&#x63A5;&#x53E3;&#xFF1A;</p>
+<ul>
+<li>List: &#x7EBF;&#x6027;&#x7ED3;&#x6784;</li>
+<li>Set</li>
+<li>Map: &#x54C8;&#x5E0C;&#x7ED3;&#x6784;</li>
+<li>Queue: &#x7279;&#x6B8A;&#x7684;&#x7EBF;&#x6027;&#x7ED3;&#x6784;</li>
+</ul>
+<h4 id="&#x96C6;&#x5408;&#x521D;&#x59CB;&#x5316;"><a href="#&#x96C6;&#x5408;&#x521D;&#x59CB;&#x5316;" class="headerlink" title="&#x96C6;&#x5408;&#x521D;&#x59CB;&#x5316;"></a>&#x96C6;&#x5408;&#x521D;&#x59CB;&#x5316;</h4><h5 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h5><p>1&#x3001;&#x4F7F;&#x7528;&#x65E0;&#x53C2;&#x6784;&#x9020;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x5BB9;&#x91CF;&#x5927;&#x5C0F;10</p>
+<p>2&#x3001;&#x6269;&#x5BB9;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#xFF1A;oldCapacity + (oldCapacity &gt;&gt; 1)</p>
+<blockquote>
+<p>&#x5047;&#x5982;&#x9700;&#x8981;&#x5C06;1000&#x4E2A;&#x5143;&#x7D20;&#x653E;&#x7F6E;&#x5728;ArrayList&#x4E2D;&#xFF0C;&#x91C7;&#x7528;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x9700;&#x8981;&#x88AB;&#x52A8;&#x6269;&#x5BB9;10*1.5<sup>n</sup>=1000&#xFF0C;n=13&#x6B21;&#x624D;&#x80FD;&#x5B8C;&#x6210;&#x3002;&#x5982;&#x679C;&#x521D;&#x59CB;&#x5316;&#x5206;&#x914D;1000&#x4E2A;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x4ECE;&#x800C;&#x907F;&#x514D;&#x88AB;&#x52A8;&#x6269;&#x5BB9;&#x6570;&#x7EC4;&#x590D;&#x5236;&#x7684;&#x989D;&#x5916;&#x5F00;&#x9500;</p>
+</blockquote>
+<h5 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h5><p>1&#x3001;&#x4F7F;&#x7528;&#x65E0;&#x53C2;&#x6784;&#x9020;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x5BB9;&#x91CF;16</p>
+<p>2&#x3001;&#x586B;&#x5145;&#x6BD4;&#x4F8B;0.75</p>
+<h4 id="&#x6570;&#x7EC4;&#x4E0E;&#x96C6;&#x5408;"><a href="#&#x6570;&#x7EC4;&#x4E0E;&#x96C6;&#x5408;" class="headerlink" title="&#x6570;&#x7EC4;&#x4E0E;&#x96C6;&#x5408;"></a>&#x6570;&#x7EC4;&#x4E0E;&#x96C6;&#x5408;</h4><p>&#x6570;&#x7EC4;&#x8F6C;&#x96C6;&#x5408;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String[] strings = <span class="keyword">new</span> String[]{<span class="string">&quot;one&quot;</span>, <span class="string">&quot;two&quot;</span>, <span class="string">&quot;three&quot;</span>};</span><br><span class="line">List&lt;String&gt; stringList = Arrays.asList(strings);</span><br><span class="line">stringList.add(<span class="string">&quot;12&quot;</span>); <span class="comment">// UnsupportedOperationException</span></span><br><span class="line">stringList.remove(<span class="number">2</span>); <span class="comment">// UnsupportedOperationException</span></span><br><span class="line">stringList.clear(); <span class="comment">// UnsupportedOperationException</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>&#x901A;&#x8FC7;&#x6E90;&#x7801;&#x80FD;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x5185;&#x90E8;&#x79C1;&#x6709;&#x7684;&#x7684;ArrayList&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x975E;Collection&#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x4E0D;&#x80FD;&#x6709;add\remove\clear&#x64CD;&#x4F5C;</p>
+</blockquote>
+<p>&#x96C6;&#x5408;&#x8F6C;&#x6570;&#x7EC4;</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2018/07/03/java8-stream/" itemprop="url">
                   java8-stream
                 </a>
@@ -667,128 +828,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/18/mybatis-foreach/" itemprop="url">
-                  Mybatis Foreach
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-18T23:35:16+08:00" content="2016-12-18">
-              2016-12-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/后端/" itemprop="url" rel="index">
-                    <span itemprop="name">后端</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/18/mybatis-foreach/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/18/mybatis-foreach/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="foreach&#x7B80;&#x4ECB;"><a href="#foreach&#x7B80;&#x4ECB;" class="headerlink" title="foreach&#x7B80;&#x4ECB;"></a>foreach&#x7B80;&#x4ECB;</h2><p>foreach&#x7684;&#x4E3B;&#x8981;&#x7528;&#x5728;&#x6784;&#x5EFA;in&#x6761;&#x4EF6;&#x4E2D;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x5728;SQL&#x8BED;&#x53E5;&#x4E2D;&#x8FDB;&#x884C;&#x8FED;&#x4EE3;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x3002;foreach&#x5143;&#x7D20;&#x7684;&#x5C5E;&#x6027;&#x4E3B;&#x8981;&#x6709; item&#xFF0C;index&#xFF0C;collection&#xFF0C;open&#xFF0C;separator&#xFF0C;close&#xFF0C;&#x7F51;&#x4E0A;&#x89E3;&#x91CA;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x4F7F;&#x7528;&#x65F6;&#x6CE8;&#x610F;<code>collection</code>,&#x8FD9;&#x4E2A;&#x662F;&#x5173;&#x952E;&#xFF0C;&#x5BB9;&#x6613;&#x9519;&#x8BEF;&#xFF0C;&#x4E0B;&#x9762;&#x5206;&#x522B;&#x4ECB;&#x7ECD;5&#x79CD;&#x60C5;&#x51B5;&#x3002;</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/18/mybatis-foreach/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -829,7 +873,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -846,7 +890,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">39</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
