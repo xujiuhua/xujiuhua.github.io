@@ -1,15 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
 
 
 
@@ -27,23 +46,75 @@
 
 
 
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css" />
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Johuer&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="Johuer&#39;s Blog">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Johuer&#39;s Blog">
 
 
 
@@ -52,42 +123,17 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+  <link rel="canonical" href="http://yoursite.com/page/3/"/>
 
 
 
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Johuer&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
-<meta property="og:site_name" content="Johuer&#39;s Blog">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Johuer&#39;s Blog">
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 6240251762876351000,
-      author: '博主'
-    }
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
   };
 </script>
 
-  <title> Johuer's Blog </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>Johuer's Blog</title>
   
 
 
@@ -96,99 +142,148 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Johuer's Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Johuer's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">多学一点知识，就少写一行代码</p>
+      
+    
   </div>
-  <p class="site-subtitle">多学一点知识，就少写一行代码</p>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+
 
 <nav class="site-nav">
-  
-
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+
+  </li>
+
+      
       
     </ul>
   
 
   
+
+  
 </nav>
 
- </div>
+
+
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -196,13 +291,29 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/20/es6browserifygulp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johuer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xujiuhua.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johuer's Blog">
+    </span>
 
     
       <header class="post-header">
@@ -210,13 +321,9 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/10/20/es6browserifygulp/" itemprop="url">
-                  ES6 Browserify Gulp整合
-                </a>
+                
+                <a href="/2016/10/20/es6browserifygulp/" class="post-title-link" itemprop="http://yoursite.com/page/3/index.html">ES6 Browserify Gulp整合</a>
               
             
           </h1>
@@ -224,57 +331,85 @@
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-20T13:51:52+08:00" content="2016-10-20">
-              2016-10-20
-            </time>
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-10-20 13:51:52" itemprop="dateCreated datePublished" datetime="2016-10-20T13:51:52+08:00">2016-10-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2016-11-18 10:59:51" itemprop="dateModified" datetime="2016-11-18T10:59:51+08:00">2016-11-18</time>
+              
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
 
                 
                 
-
               
             </span>
           
 
           
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/20/es6browserifygulp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/20/es6browserifygulp/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
+          
+
+          
           
 
           
 
           
+
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -288,20 +423,37 @@
 </blockquote>
 <p>Browsers don&#x2019;t have the require method defined, but Node.js does. With Browserify you can write code that uses require in the same way that you would use it in Node.</p>
 <p>&#x6D4F;&#x89C8;&#x5668;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;<code>require</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;node.js&#x6709;&#x3002;&#x4F7F;&#x7528;<code>Browserify</code>&#x80FD;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x5199;&#x4EE3;&#x7801;&#x4F7F;&#x7528;<code>require</code>&#x65B9;&#x6CD5;&#x5C31;&#x540C;&#x5728;<code>Node</code>&#x4E0A;</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/20/es6browserifygulp/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2016/10/20/es6browserifygulp/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -311,6 +463,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -318,13 +474,29 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/26/Spring-Mybatis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johuer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xujiuhua.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johuer's Blog">
+    </span>
 
     
       <header class="post-header">
@@ -332,13 +504,9 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/09/26/Spring-Mybatis/" itemprop="url">
-                  Spring-Mybatis-Json
-                </a>
+                
+                <a href="/2016/09/26/Spring-Mybatis/" class="post-title-link" itemprop="http://yoursite.com/page/3/index.html">Spring-Mybatis-Json</a>
               
             
           </h1>
@@ -346,38 +514,67 @@
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-26T15:03:52+08:00" content="2016-09-26">
-              2016-09-26
-            </time>
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-09-26 15:03:52" itemprop="dateCreated datePublished" datetime="2016-09-26T15:03:52+08:00">2016-09-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2016-11-04 19:49:33" itemprop="dateModified" datetime="2016-11-04T19:49:33+08:00">2016-11-04</time>
+              
+            
           </span>
 
           
 
           
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/26/Spring-Mybatis/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/26/Spring-Mybatis/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
+          
+
+          
           
 
           
 
           
+
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -387,20 +584,37 @@
         
           <h2 id="Spring-Mybatis-JSON"><a href="#Spring-Mybatis-JSON" class="headerlink" title="Spring-Mybatis-JSON"></a>Spring-Mybatis-JSON</h2><p>Spring&#x7248;&#x672C;&#x662F;4.3.2&#xFF0C;&#x5728;&#x7528;@ResponseBody&#x6807;&#x6CE8;&#x8FD4;&#x56DE;json&#x683C;&#x5F0F;&#x65F6;&#x5019;&#x9047;&#x5230;&#x8FD9;&#x6837;&#x7684;&#x9519;&#x8BEF;&#xFF1A;&#x201C;The resource identified by this request is only capable of generating responses with characteristics not acceptable according to the request &#x201C;accept&#x201D; headers.&#x201D;&#x3002;</p>
 <p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;<br><a href="http://www.tuicool.com/articles/Nvm2Y3e" target="_blank" rel="noopener">&#x53C2;&#x8003;</a></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/26/Spring-Mybatis/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2016/09/26/Spring-Mybatis/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -410,6 +624,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -417,13 +635,29 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/28/Dynamic-Javascript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johuer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xujiuhua.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johuer's Blog">
+    </span>
 
     
       <header class="post-header">
@@ -431,13 +665,9 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/06/28/Dynamic-Javascript/" itemprop="url">
-                  Dynamic-Javascript
-                </a>
+                
+                <a href="/2016/06/28/Dynamic-Javascript/" class="post-title-link" itemprop="http://yoursite.com/page/3/index.html">Dynamic-Javascript</a>
               
             
           </h1>
@@ -445,57 +675,73 @@
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-28T22:23:39+08:00" content="2016-06-28">
-              2016-06-28
-            </time>
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-06-28 22:23:39 / 修改时间：22:36:10" itemprop="dateCreated datePublished" datetime="2016-06-28T22:23:39+08:00">2016-06-28</time>
+            
+
+            
+              
+
+              
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a></span>
 
                 
                 
-
               
             </span>
           
 
           
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/28/Dynamic-Javascript/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/28/Dynamic-Javascript/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
+          
+
+          
           
 
           
 
           
+
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -506,20 +752,37 @@
           <h1 id="&#x52A8;&#x6001;&#x64CD;&#x4F5C;js"><a href="#&#x52A8;&#x6001;&#x64CD;&#x4F5C;js" class="headerlink" title="&#x52A8;&#x6001;&#x64CD;&#x4F5C;js"></a>&#x52A8;&#x6001;&#x64CD;&#x4F5C;js</h1><h2 id="&#x52A8;&#x6001;&#x52A0;&#x8F7D;"><a href="#&#x52A8;&#x6001;&#x52A0;&#x8F7D;" class="headerlink" title="&#x52A8;&#x6001;&#x52A0;&#x8F7D;"></a>&#x52A8;&#x6001;&#x52A0;&#x8F7D;</h2><p>&#x5728;&#x9700;&#x8981;&#x52A0;&#x8F7D;js&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x76F4;&#x63A5;&#x5199;&#x5165;&#x4E00;&#x4E0B;&#x4EE3;&#x7801;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.write(<span class="string">&apos;&lt;script src=&quot;js/jquery-3.0.0.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;\/script&gt;&apos;</span>);</span><br></pre></td></tr></table></figure></p>
 <p>Example:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;utf-8&quot;</span> /&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        <span class="built_in">window</span>.jQuery || <span class="built_in">document</span>.write(<span class="string">&apos;&lt;script src=&quot;js/jquery-3.0.0.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;\/script&gt;&apos;</span>);</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;script src=&quot;js/</span>jquery.jsonp.js<span class="string">&quot; type=&quot;</span>text/javascript<span class="string">&quot; charset=&quot;</span>utf<span class="number">-8</span><span class="string">&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br></pre></td></tr></table></figure></p>
 <hr>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/28/Dynamic-Javascript/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2016/06/28/Dynamic-Javascript/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -529,6 +792,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -536,13 +803,29 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/14/tomcat-config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johuer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xujiuhua.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johuer's Blog">
+    </span>
 
     
       <header class="post-header">
@@ -550,13 +833,9 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/06/14/tomcat-config/" itemprop="url">
-                  Tomcat-Config
-                </a>
+                
+                <a href="/2016/06/14/tomcat-config/" class="post-title-link" itemprop="http://yoursite.com/page/3/index.html">Tomcat-Config</a>
               
             
           </h1>
@@ -564,57 +843,85 @@
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-14T21:37:26+08:00" content="2016-06-14">
-              2016-06-14
-            </time>
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-06-14 21:37:26" itemprop="dateCreated datePublished" datetime="2016-06-14T21:37:26+08:00">2016-06-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2016-06-22 15:17:06" itemprop="dateModified" datetime="2016-06-22T15:17:06+08:00">2016-06-22</time>
+              
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/tomcat/" itemprop="url" rel="index">
-                    <span itemprop="name">tomcat</span>
-                  </a>
-                </span>
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tomcat/" itemprop="url" rel="index"><span itemprop="name">tomcat</span></a></span>
 
                 
                 
-
               
             </span>
           
 
           
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/14/tomcat-config/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/14/tomcat-config/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
+          
+
+          
           
 
           
 
           
+
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -625,20 +932,37 @@
           <p>&#x3000;&#x3000;tomcat&#x5185;&#x5B58;&#x8BBE;&#x7F6E;&#x3001;&#x7EBF;&#x7A0B;&#x6C60;&#x8BBE;&#x7F6E;&#x3001;&#x53CA;&#x72B6;&#x6001;&#x67E5;&#x770B;</p>
 <h2 id="&#x5185;&#x5B58;&#x8BBE;&#x7F6E;"><a href="#&#x5185;&#x5B58;&#x8BBE;&#x7F6E;" class="headerlink" title="&#x5185;&#x5B58;&#x8BBE;&#x7F6E;"></a>&#x5185;&#x5B58;&#x8BBE;&#x7F6E;</h2><p>window&#xFF1A;<br>&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#xFF1A;tomcat/bin/catalian.bat<br>&#x5728;rem Guess CATALINA_HOME if not defined&#x4E0B;&#x6DFB;&#x52A0;&#xFF1A;<br><code>set JAVA_OPTS=-Xms512m -Xmx512m -XX:MaxNewSize=512m -XX:MaxPermSize=512m</code></p>
 <p>-Xms&#xFF1A;java Heap&#x521D;&#x59CB;&#x5927;&#x5C0F;&#x3002; &#x9ED8;&#x8BA4;&#x662F;&#x7269;&#x7406;&#x5185;&#x5B58;&#x7684;1/64&#x3002;<br>-Xmx&#xFF1A;java heap&#x6700;&#x5927;&#x503C;&#x3002;&#x5EFA;&#x8BAE;&#x5747;&#x8BBE;&#x4E3A;&#x7269;&#x7406;&#x5185;&#x5B58;&#x7684;&#x4E00;&#x534A;&#x3002;&#x4E0D;&#x53EF;&#x8D85;&#x8FC7;&#x7269;&#x7406;&#x5185;&#x5B58;<br>-XX:PermSize:&#x8BBE;&#x5B9A;&#x5185;&#x5B58;&#x7684;&#x6C38;&#x4E45;&#x4FDD;&#x5B58;&#x533A;&#x521D;&#x59CB;&#x5927;&#x5C0F;<br>-XX:MaxPermSize:&#x8BBE;&#x5B9A;&#x5185;&#x5B58;&#x7684;&#x6C38;&#x4E45;&#x4FDD;&#x5B58;&#x533A;&#x6700;&#x5927;&#x5927;&#x5C0F;<br>-XX:NewSize: &#x65B0;&#x751F;&#x6210;&#x7684;&#x6C60;&#x7684;&#x521D;&#x59CB;&#x5927;&#x5C0F;<br>-XX:MaxNewSize: &#x65B0;&#x751F;&#x6210;&#x7684;&#x6C60;&#x7684;&#x6700;&#x5927;&#x5927;&#x5C0F;</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/14/tomcat-config/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2016/06/14/tomcat-config/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -648,6 +972,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -655,13 +983,29 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/05/h5-s-audio-and-video/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johuer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xujiuhua.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johuer's Blog">
+    </span>
 
     
       <header class="post-header">
@@ -669,13 +1013,9 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/05/05/h5-s-audio-and-video/" itemprop="url">
-                  HHTML5之Audio and Video
-                </a>
+                
+                <a href="/2016/05/05/h5-s-audio-and-video/" class="post-title-link" itemprop="http://yoursite.com/page/3/index.html">HHTML5之Audio and Video</a>
               
             
           </h1>
@@ -683,57 +1023,85 @@
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-05T17:00:02+08:00" content="2016-05-05">
-              2016-05-05
-            </time>
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-05-05 17:00:02" itemprop="dateCreated datePublished" datetime="2016-05-05T17:00:02+08:00">2016-05-05</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2016-11-04 19:53:40" itemprop="dateModified" datetime="2016-11-04T19:53:40+08:00">2016-11-04</time>
+              
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/H5/" itemprop="url" rel="index">
-                    <span itemprop="name">H5</span>
-                  </a>
-                </span>
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/H5/" itemprop="url" rel="index"><span itemprop="name">H5</span></a></span>
 
                 
                 
-
               
             </span>
           
 
           
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/05/h5-s-audio-and-video/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/05/h5-s-audio-and-video/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
+          
+
+          
           
 
           
 
           
+
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -745,20 +1113,37 @@
 <p>[TOC]</p>
 <h1 id="pc"><a href="#pc" class="headerlink" title="pc"></a><strong>pc</strong></h1><p>PC&#x7AEF;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528;<code>play</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x5373;&#x53EF;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x5728;pc&#x7AEF;&#x548C;QQ&#x6D4F;&#x89C8;&#x5668;&#x5B8C;&#x7F8E;&#x8FD0;&#x884C;&#x3002;<br>&#x4F46;&#x662F;&#x79FB;&#x52A8;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x95EE;&#x9898;&#x5C31;&#x51FA;&#x73B0;&#x4E86;&#xFF0C;&#x4E0D;&#x4FE1;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5;&#x3002;</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">&lt;audio id=<span class="string">&quot;audio&quot;</span> src=<span class="string">&quot;source/oneminute.mp3&quot;</span> preload=<span class="string">&quot;auto&quot;</span>&gt;</span><br><span class="line">&lt;<span class="regexp">/audio&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">js:</span></span><br><span class="line"><span class="regexp">window.onload = function() {</span></span><br><span class="line"><span class="regexp">    play();</span></span><br><span class="line"><span class="regexp">}</span></span><br><span class="line"><span class="regexp">function play() {</span></span><br><span class="line"><span class="regexp">    var audio = document.getElementById(&quot;audio&quot;);</span></span><br><span class="line"><span class="regexp">    audio.play();</span></span><br><span class="line"><span class="regexp">}</span></span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/05/h5-s-audio-and-video/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2016/05/05/h5-s-audio-and-video/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -768,6 +1153,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -776,15 +1165,12 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -800,79 +1186,217 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/github02.jpg"
-               alt="Johuer" />
-          <p class="site-author-name" itemprop="name">Johuer</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">26</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/xujiuhua.png"
+                alt="Johuer" />
+            
+              <p class="site-author-name" itemprop="name">Johuer</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
           
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">11</span>
-                <span class="site-state-item-name">分类</span>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
               </a>
             </div>
           
 
           
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">39</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/xujiuhua" title="GitHub &rarr; https://github.com/xujiuhua" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:xujiuhuamoney@163.com" title="E-Mail &rarr; mailto:xujiuhuamoney@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             </div>
           
 
-        </nav>
+          
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
+          
+          
 
-        <div class="links-of-author motion-element">
           
             
-              <span class="links-of-author-item">
-                <a href="https://github.com/xujiuhua" target="_blank">
-                  
-                    <i class="fa fa-github"></i> GitHub
-                  
-                </a>
-              </span>
-            
           
-        </div>
-
-        
-        
-
-        <div class="links-of-author motion-element">
           
-        </div>
 
+        </div>
       </section>
+
+      
 
       
 
@@ -886,44 +1410,59 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Johuer</span>
-</div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
+  
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
+  
 </div>
 
 
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1</div>
 
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
   </div>
 
   
-
-
-  
-
-
-
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -932,72 +1471,25 @@
 </script>
 
 
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js"></script>
-
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
 
 
 
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
 
 
 
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
 
 
 
-  
 
-  
-    
-  
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"hexo-blog-johuer"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
-  
-    
-      <script src="/lib/ua-parser-js/dist/ua-parser.min.js"></script>
-      <script src="/js/src/hook-duoshuo.js"></script>
-    
-  
+
+
+
+
+
+
+
 
 
 
@@ -1005,10 +1497,93 @@
 
   
   
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
   
 
   
 
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
