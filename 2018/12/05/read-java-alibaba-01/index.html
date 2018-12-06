@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="Johuer&#39;s Blog">
 <meta property="og:description" content="&amp;#x6570;&amp;#x636E;&amp;#x7ED3;&amp;#x6784;&amp;#x4E0E;&amp;#x96C6;&amp;#x5408;&amp;#x6570;&amp;#x636E;&amp;#x7ED3;&amp;#x6784;&amp;#x5206;&amp;#x7C7B;   &amp;#x7C7B;&amp;#x578B; &amp;#x5907;&amp;#x6CE8;     &amp;#x7EBF;&amp;#x6027;&amp;#x7ED3;&amp;#x6784; 0&amp;#x81F3;1&amp;#x4E2A;&amp;#x7">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-05T09:05:15.508Z">
+<meta property="og:updated_time" content="2018-12-05T14:52:17.187Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="码出高效java开发手册-小结01">
 <meta name="twitter:description" content="&amp;#x6570;&amp;#x636E;&amp;#x7ED3;&amp;#x6784;&amp;#x4E0E;&amp;#x96C6;&amp;#x5408;&amp;#x6570;&amp;#x636E;&amp;#x7ED3;&amp;#x6784;&amp;#x5206;&amp;#x7C7B;   &amp;#x7C7B;&amp;#x578B; &amp;#x5907;&amp;#x6CE8;     &amp;#x7EBF;&amp;#x6027;&amp;#x7ED3;&amp;#x6784; 0&amp;#x81F3;1&amp;#x4E2A;&amp;#x7">
@@ -349,7 +349,7 @@
                 
               
 
-              <time title="创建时间：2018-12-05 16:20:31 / 修改时间：17:05:15" itemprop="dateCreated datePublished" datetime="2018-12-05T16:20:31+08:00">2018-12-05</time>
+              <time title="创建时间：2018-12-05 16:20:31 / 修改时间：22:52:17" itemprop="dateCreated datePublished" datetime="2018-12-05T16:20:31+08:00">2018-12-05</time>
             
 
             
@@ -454,8 +454,11 @@
 </blockquote>
 <p>&#x96C6;&#x5408;&#x8F6C;&#x6570;&#x7EC4;</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;(<span class="number">3</span>);</span><br><span class="line">list.add(<span class="string">&quot;one&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;two&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;three&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x6CDB;&#x578B;&#x4E22;&#x5931;,&#x4E0D;&#x9002;&#x7528;</span></span><br><span class="line">Object[] array1 = list.toArray();</span><br><span class="line"></span><br><span class="line">String[] array2 = <span class="keyword">new</span> String[<span class="number">2</span>];</span><br><span class="line">list.toArray(array2); <span class="comment">// null</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">String[] array3 = <span class="keyword">new</span> String[<span class="number">3</span>];</span><br><span class="line">list.toArray(array3); <span class="comment">// one two three</span></span><br></pre></td></tr></table></figure>
-<p><code>toArray</code>&#x6E90;&#x7801;&#x89E3;&#x8BFB;&#xFF1A;&#x5F53;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x96C6;&#x5408;&#x957F;&#x5EA6;&#xFF0C;&#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;; &#x53CD;&#x4E4B;&#x5219;&#x590D;&#x5236;&#x5230;&#x73B0;&#x6570;&#x7EC4;</p>
+<p><code>toArray</code>&#x6E90;&#x7801;&#x89E3;&#x8BFB;&#xFF1A;&#x5373;&#x5C06;&#x590D;&#x5236;&#x8FDB;&#x53BB;&#x7684;&#x6570;&#x7EC4;&#x5BB9;&#x91CF;&#x5982;&#x679C;&#x4E0D;&#x591F;&#xFF0C;&#x5219;&#x5F03;&#x7528;&#x6B64;&#x6570;&#x7EC4;</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;T&gt; T[] toArray(T[] a) {</span><br><span class="line">    <span class="keyword">if</span> (a.length &lt; size)</span><br><span class="line">        <span class="comment">// Make a new array of a&apos;s runtime type, but my contents:</span></span><br><span class="line">        <span class="keyword">return</span> (T[]) Arrays.copyOf(elementData, size, a.getClass());</span><br><span class="line">    System.arraycopy(elementData, <span class="number">0</span>, a, <span class="number">0</span>, size);</span><br><span class="line">    <span class="keyword">if</span> (a.length &gt; size)</span><br><span class="line">        a[size] = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>&#x5982;&#x679C;&#x6570;&#x7EC4;&#x521D;&#x59CB;&#x5316;&#x5927;&#x5C0F;&#x8BBE;&#x7F6E;&#x4E0D;&#x5F53;&#xFF0C;&#x4E0D;&#x4EC5;&#x4F1A;&#x964D;&#x4F4E;&#x6027;&#x80FD;&#xFF0C;&#x8FD8;&#x4F1A;&#x6D6A;&#x8D39;&#x7A7A;&#x95F4;&#xFF1B;&#x4F7F;&#x7528;&#x96C6;&#x5408;&#x7684;toArray(T[] array) &#x65B9;&#x6CD5;&#xFF0C;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x7EC4;&#x65F6;&#xFF0C;&#x6CE8;&#x610F;&#x9700;&#x8981;&#x4F20;&#x5165;&#x7C7B;&#x578B;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x7684;&#x5BB9;&#x91CF;&#x5927;&#x5C0F;&#x4E3A;list.size()</p>
+</blockquote>
 
       
     </div>
@@ -503,6 +506,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/06/read-java-alibaba-02/" rel="prev" title="码出高效java开发手册-小结02">
+                码出高效java开发手册-小结02 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -576,7 +583,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
