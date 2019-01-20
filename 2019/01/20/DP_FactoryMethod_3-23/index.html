@@ -108,18 +108,20 @@
 
 
 
-  <meta name="description" content="&amp;#x4F7F;&amp;#x7528;&amp;#x8D85;&amp;#x65F6;&amp;#x8C03;&amp;#x7528;&amp;#x6765;&amp;#x6A21;&amp;#x62DF;&amp;#x95F4;&amp;#x6B47;&amp;#x8C03;&amp;#x7528;&amp;#x65F6;&amp;#x4E00;&amp;#x79CD;&amp;#x6700;&amp;#x4F73;&amp;#x6A21;&amp;#x5F0F;,&amp;#x539F;&amp;#x56E0;&amp;#x662F;&amp;#x6700;&amp;#x540E">
-<meta name="keywords" content="JavaScript,setTimeout,setInterval">
+  <meta name="description" content="&amp;#x5DE5;&amp;#x5382;&amp;#x65B9;&amp;#x6CD5;&amp;#x6A21;&amp;#x5F0F;&amp;#x5B9A;&amp;#x4E49;&amp;#x4E00;&amp;#x4E2A;&amp;#x7528;&amp;#x4E8E;&amp;#x521B;&amp;#x5EFA;&amp;#x5BF9;&amp;#x8C61;&amp;#x7684;&amp;#x63A5;&amp;#x53E3;&amp;#xFF0C;&amp;#x8BA9;&amp;#x5B50;&amp;#x7C7B;&amp;#x51B3;&amp;#x5B9A">
+<meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript开发技巧-超时与间歇">
-<meta property="og:url" content="http://yoursite.com/2016/04/18/javascript-skill/index.html">
+<meta property="og:title" content="图解设计模式(Creational)-FactoryMethod 3&#x2F;23">
+<meta property="og:url" content="http://yoursite.com/2019/01/20/DP_FactoryMethod_3-23/index.html">
 <meta property="og:site_name" content="Johuer&#39;s Blog">
-<meta property="og:description" content="&amp;#x4F7F;&amp;#x7528;&amp;#x8D85;&amp;#x65F6;&amp;#x8C03;&amp;#x7528;&amp;#x6765;&amp;#x6A21;&amp;#x62DF;&amp;#x95F4;&amp;#x6B47;&amp;#x8C03;&amp;#x7528;&amp;#x65F6;&amp;#x4E00;&amp;#x79CD;&amp;#x6700;&amp;#x4F73;&amp;#x6A21;&amp;#x5F0F;,&amp;#x539F;&amp;#x56E0;&amp;#x662F;&amp;#x6700;&amp;#x540E">
+<meta property="og:description" content="&amp;#x5DE5;&amp;#x5382;&amp;#x65B9;&amp;#x6CD5;&amp;#x6A21;&amp;#x5F0F;&amp;#x5B9A;&amp;#x4E49;&amp;#x4E00;&amp;#x4E2A;&amp;#x7528;&amp;#x4E8E;&amp;#x521B;&amp;#x5EFA;&amp;#x5BF9;&amp;#x8C61;&amp;#x7684;&amp;#x63A5;&amp;#x53E3;&amp;#xFF0C;&amp;#x8BA9;&amp;#x5B50;&amp;#x7C7B;&amp;#x51B3;&amp;#x5B9A">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2016-06-28T14:42:01.755Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/20/DP_FactoryMethod_3-23/uml.png">
+<meta property="og:updated_time" content="2019-01-20T15:06:27.001Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript开发技巧-超时与间歇">
-<meta name="twitter:description" content="&amp;#x4F7F;&amp;#x7528;&amp;#x8D85;&amp;#x65F6;&amp;#x8C03;&amp;#x7528;&amp;#x6765;&amp;#x6A21;&amp;#x62DF;&amp;#x95F4;&amp;#x6B47;&amp;#x8C03;&amp;#x7528;&amp;#x65F6;&amp;#x4E00;&amp;#x79CD;&amp;#x6700;&amp;#x4F73;&amp;#x6A21;&amp;#x5F0F;,&amp;#x539F;&amp;#x56E0;&amp;#x662F;&amp;#x6700;&amp;#x540E">
+<meta name="twitter:title" content="图解设计模式(Creational)-FactoryMethod 3&#x2F;23">
+<meta name="twitter:description" content="&amp;#x5DE5;&amp;#x5382;&amp;#x65B9;&amp;#x6CD5;&amp;#x6A21;&amp;#x5F0F;&amp;#x5B9A;&amp;#x4E49;&amp;#x4E00;&amp;#x4E2A;&amp;#x7528;&amp;#x4E8E;&amp;#x521B;&amp;#x5EFA;&amp;#x5BF9;&amp;#x8C61;&amp;#x7684;&amp;#x63A5;&amp;#x53E3;&amp;#xFF0C;&amp;#x8BA9;&amp;#x5B50;&amp;#x7C7B;&amp;#x51B3;&amp;#x5B9A">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/20/DP_FactoryMethod_3-23/uml.png">
 
 
 
@@ -128,7 +130,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/04/18/javascript-skill/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/01/20/DP_FactoryMethod_3-23/"/>
 
 
 
@@ -138,7 +140,7 @@
   };
 </script>
 
-  <title>JavaScript开发技巧-超时与间歇 | Johuer's Blog</title>
+  <title>图解设计模式(Creational)-FactoryMethod 3/23 | Johuer's Blog</title>
   
 
 
@@ -307,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/18/javascript-skill/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/20/DP_FactoryMethod_3-23/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Johuer">
@@ -324,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaScript开发技巧-超时与间歇
+          <h1 class="post-title" itemprop="name headline">图解设计模式(Creational)-FactoryMethod 3/23
               
             
           </h1>
@@ -349,24 +351,12 @@
                 
               
 
-              <time title="创建时间：2016-04-18 22:49:58" itemprop="dateCreated datePublished" datetime="2016-04-18T22:49:58+08:00">2016-04-18</time>
+              <time title="创建时间：2019-01-20 22:48:03 / 修改时间：23:06:27" itemprop="dateCreated datePublished" datetime="2019-01-20T22:48:03+08:00">2019-01-20</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2016-06-28 22:42:01" itemprop="dateModified" datetime="2016-06-28T22:42:01+08:00">2016-06-28</time>
               
             
           </span>
@@ -383,7 +373,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/js技巧/" itemprop="url" rel="index"><span itemprop="name">js技巧</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
 
                 
                 
@@ -417,10 +407,31 @@
       
 
       
-        <p>&#x4F7F;&#x7528;&#x8D85;&#x65F6;&#x8C03;&#x7528;&#x6765;&#x6A21;&#x62DF;&#x95F4;&#x6B47;&#x8C03;&#x7528;&#x65F6;&#x4E00;&#x79CD;&#x6700;&#x4F73;&#x6A21;&#x5F0F;,&#x539F;&#x56E0;&#x662F;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x95F4;&#x6B47;&#x8C03;&#x7528;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x524D;&#x4E00;&#x6B21;&#x95F4;&#x6B47;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x524D;&#x542F;&#x52A8;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x597D;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x95F4;&#x6B47;&#x8C03;&#x7528;&#x3002;</p>
-<h2 id="&#x95F4;&#x6B47;&#x8C03;&#x7528;"><a href="#&#x95F4;&#x6B47;&#x8C03;&#x7528;" class="headerlink" title="&#x95F4;&#x6B47;&#x8C03;&#x7528;"></a>&#x95F4;&#x6B47;&#x8C03;&#x7528;</h2><p>// no recommend<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> max = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> intervalId = <span class="literal">null</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">incrementNumber</span>(<span class="params"></span>) </span>{</span><br><span class="line">    num++;</span><br><span class="line">    <span class="keyword">if</span>(num == max) {</span><br><span class="line">        clearInterval(intervalId);</span><br><span class="line">        alert(<span class="string">&quot;Done!&quot;</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line">intervalId = setInterval(incrementNumber, <span class="number">500</span>);</span><br></pre></td></tr></table></figure></p>
+        <blockquote>
+<p>&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x8BA9;&#x5B50;&#x7C7B;&#x51B3;&#x5B9A;&#x5B9E;&#x4F8B;&#x5316;&#x54EA;&#x4E00;&#x4E2A;&#x7C7B;&#x3002;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x4F7F;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#x5EF6;&#x8FDF;&#x5230;&#x5176;&#x5B50;&#x7C7B;&#x3002;</p>
+</blockquote>
 <a id="more"></a>
-<h2 id="&#x8D85;&#x65F6;&#x8C03;&#x7528;"><a href="#&#x8D85;&#x65F6;&#x8C03;&#x7528;" class="headerlink" title="&#x8D85;&#x65F6;&#x8C03;&#x7528;"></a>&#x8D85;&#x65F6;&#x8C03;&#x7528;</h2><p>// recommend<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> max = <span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">incrementNumber</span>(<span class="params"></span>) </span>{</span><br><span class="line">    num++;</span><br><span class="line">    <span class="keyword">if</span>(num &lt; max) {</span><br><span class="line">        setTimeout(incrementNumber, <span class="number">500</span>);  </span><br><span class="line">    }<span class="keyword">else</span>{</span><br><span class="line">        alert(<span class="string">&quot;Done!&quot;</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">setTimeout(incrementNumber, <span class="number">500</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="&#x53C2;&#x4E0E;&#x89D2;&#x8272;"><a href="#&#x53C2;&#x4E0E;&#x89D2;&#x8272;" class="headerlink" title="&#x53C2;&#x4E0E;&#x89D2;&#x8272;"></a>&#x53C2;&#x4E0E;&#x89D2;&#x8272;</h3><p>&#x62BD;&#x8C61;&#x4EA7;&#x54C1;&#x89D2;&#x8272;&#xFF08;Product&#xFF09;&#xFF1A;&#x5B9A;&#x4E49;&#x4EA7;&#x54C1;&#x7684;&#x63A5;&#x53E3;<br>&#x5177;&#x4F53;&#x4EA7;&#x54C1;&#x89D2;&#x8272;&#xFF08;ConcreteProduct&#xFF09; &#xFF1A;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;Product&#x7684;&#x5177;&#x4F53;&#x4EA7;&#x54C1;&#x7C7B;<br>&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x89D2;&#x8272;&#xFF08;Creator&#xFF09; &#xFF1A;&#x58F0;&#x660E;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#xFF08;FactoryMethod&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4EA7;&#x54C1;<br>&#x771F;&#x5B9E;&#x7684;&#x5DE5;&#x5382;&#xFF08;ConcreteCreator&#xFF09;&#xFF1A;&#x5B9E;&#x73B0;FactoryMethod&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#xFF0C;&#x7531;&#x5BA2;&#x6237;&#x8C03;&#x7528;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4EA7;&#x54C1;&#x7684;&#x5B9E;&#x4F8B;</p>
+<ul>
+<li>TextBuilder: &#x4F7F;&#x7528;&#x7EAF;&#x6587;&#x672C;&#x7F16;&#x5199;&#x6587;&#x6863;</li>
+<li>HTMLBuilder: &#x4F7F;&#x7528;HTML&#x7F16;&#x5199;&#x6587;&#x6863;</li>
+</ul>
+<h3 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h3><p><img src="/2019/01/20/DP_FactoryMethod_3-23/uml.png" alt="logo"></p>
+<h3 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><a href="#&#x793A;&#x4F8B;&#x4EE3;&#x7801;" class="headerlink" title="&#x793A;&#x4F8B;&#x4EE3;&#x7801;"></a>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h3><p>Prdocut</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Product</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">use</span><span class="params">()</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>Factory</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Factory</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> Product <span class="title">createProduct</span><span class="params">(String owner)</span></span>;</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>ConcreteProduct</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IDCard</span> <span class="keyword">extends</span> <span class="title">Product</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String owner;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">IDCard</span><span class="params">(String owner)</span> </span>{</span><br><span class="line">        System.out.println(<span class="string">&quot;&#x5236;&#x4F5C;&quot;</span> + owner + <span class="string">&quot;&#x7684;ID&#x5361;&quot;</span>);</span><br><span class="line">        <span class="keyword">this</span>.owner = owner;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">use</span><span class="params">()</span> </span>{</span><br><span class="line">        System.out.println(<span class="string">&quot;&#x4F7F;&#x7528;&quot;</span> + owner + <span class="string">&quot;&#x7684;ID&#x5361;&quot;</span>);</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>ConcreteCreator</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IDCardFactory</span> <span class="keyword">extends</span> <span class="title">Factory</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> Product <span class="title">createProduct</span><span class="params">(String owner)</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> IDCard(owner);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>Main</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        Factory factory = <span class="keyword">new</span> IDCardFactory();</span><br><span class="line">        Product p1 = factory.createProduct(<span class="string">&quot;&#x5F20;&#x4E09;&quot;</span>);</span><br><span class="line">        Product p2 = factory.createProduct(<span class="string">&quot;&#x674E;&#x56DB;&quot;</span>);</span><br><span class="line">        Product p3 = factory.createProduct(<span class="string">&quot;&#x738B;&#x4E94;&quot;</span>);</span><br><span class="line"></span><br><span class="line">        p1.use();</span><br><span class="line">        p2.use();</span><br><span class="line">        p3.use();</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>Output</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x5236;&#x4F5C;&#x5F20;&#x4E09;&#x7684;ID&#x5361;</span><br><span class="line">&#x5236;&#x4F5C;&#x674E;&#x56DB;&#x7684;ID&#x5361;</span><br><span class="line">&#x5236;&#x4F5C;&#x738B;&#x4E94;&#x7684;ID&#x5361;</span><br><span class="line">&#x4F7F;&#x7528;&#x5F20;&#x4E09;&#x7684;ID&#x5361;</span><br><span class="line">&#x4F7F;&#x7528;&#x674E;&#x56DB;&#x7684;ID&#x5361;</span><br><span class="line">&#x4F7F;&#x7528;&#x738B;&#x4E94;&#x7684;ID&#x5361;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;&#x770B;&#x8D77;&#x6765;&#x8981;&#x6BD4;&#x8D77;&#x7B80;&#x5355;&#x5DE5;&#x5382;&#x8981;&#x9EBB;&#x70E6;&#x4E0D;&#x5C11;&#xFF0C;<strong>&#x4E00;&#x4E2A;&#x4EA7;&#x54C1;&#x7C7B;&#x5C31;&#x8981;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x5DE5;&#x5382;&#x7C7B;</strong>&#xFF0C;&#x8981;&#x589E;&#x52A0;&#x4EA7;&#x54C1;&#x7C7B;&#x65F6;&#x4E5F;&#x8981;&#x76F8;&#x5E94;&#x5730;&#x589E;&#x52A0;&#x5DE5;&#x5382;&#x7C7B;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4EE3;&#x7801;&#x4E5F;&#x589E;&#x52A0;&#x4E86;&#x4E0D;&#x5C11;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x5F88;&#x591A;&#x521D;&#x5B66;&#x8005;&#x4E0D;&#x660E;&#x767D;&#x7684;&#x5730;&#x65B9;&#x3002;&#x7684;&#x786E;&#xFF0C;&#x7B80;&#x5355;&#x5DE5;&#x5382;&#x662F;&#x8981;&#x7B80;&#x4FBF;&#x4E9B;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4E0D;&#x9002;&#x5408;&#x5E94;&#x7528;&#x5728;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x9879;&#x76EE;&#x91CC;&#xFF0C;&#x800C;&#x4E14;&#x5927;&#x90E8;&#x5206;&#x60C5;&#x51B5;&#x4E0B;&#x4E5F;&#x662F;&#x7B80;&#x5355;&#x5DE5;&#x5382;&#x8981;&#x5E38;&#x7528;&#x4E9B;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x4F60;&#x5F97;&#x5148;&#x4E8B;&#x5148;&#x8003;&#x8651;&#x597D;&#x7B80;&#x5355;&#x5DE5;&#x5382;&#x662F;&#x5426;&#x65E0;&#x6CD5;&#x627F;&#x53D7;&#x4F60;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x80FD;&#x627F;&#x53D7;&#xFF0C;&#x5C31;&#x5E94;&#x8BE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;&#x3002;</p>
+</blockquote>
 
       
     </div>
@@ -444,11 +455,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
-          
-            <a href="/tags/setTimeout/" rel="tag"># setTimeout</a>
-          
-            <a href="/tags/setInterval/" rel="tag"># setInterval</a>
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
           
         </div>
       
@@ -461,8 +468,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/08/Read-JavaScript-04-Math/" rel="next" title="JavaScript高级程序设计-Math">
-                <i class="fa fa-chevron-left"></i> JavaScript高级程序设计-Math
+              <a href="/2019/01/15/DP_Builder_2-23/" rel="next" title="图解设计模式(Creational)-Builder 2/23">
+                <i class="fa fa-chevron-left"></i> 图解设计模式(Creational)-Builder 2/23
               </a>
             
           </div>
@@ -470,10 +477,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/05/h5-s-audio-and-video/" rel="prev" title="HHTML5之Audio and Video">
-                HHTML5之Audio and Video <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -745,7 +748,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#间歇调用"><span class="nav-number">1.</span> <span class="nav-text">间歇调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超时调用"><span class="nav-number">2.</span> <span class="nav-text">超时调用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参与角色"><span class="nav-number">1.</span> <span class="nav-text">参与角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML"><span class="nav-number">2.</span> <span class="nav-text">UML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例代码"><span class="nav-number">3.</span> <span class="nav-text">示例代码</span></a></li></ol></div>
             
 
           </div>
