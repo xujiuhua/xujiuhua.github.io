@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1.volatile&amp;#x80FD;&amp;#x591F;&amp;#x4FDD;&amp;#x8BC1;&amp;#x53D8;&amp;#x91CF;&amp;#x7684;&amp;#x53EF;&amp;#x89C1;&amp;#x6027;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x5E76;&amp;#x4E0D;&amp;#x80FD;&amp;#x4FDD;&amp;#x8BC1;&amp;#x53D8;&amp;#x91CF;&amp;#x7684;&amp;#x539F;&amp;#x5B50;&amp;#x60">
+<meta name="keywords" content="并发,volatile">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Concurrency：volatile两种用法">
+<meta property="og:url" content="http://yoursite.com/2019/01/23/concurrency-volatile/index.html">
+<meta property="og:site_name" content="Johuer&#39;s Blog">
+<meta property="og:description" content="1.volatile&amp;#x80FD;&amp;#x591F;&amp;#x4FDD;&amp;#x8BC1;&amp;#x53D8;&amp;#x91CF;&amp;#x7684;&amp;#x53EF;&amp;#x89C1;&amp;#x6027;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x5E76;&amp;#x4E0D;&amp;#x80FD;&amp;#x4FDD;&amp;#x8BC1;&amp;#x53D8;&amp;#x91CF;&amp;#x7684;&amp;#x539F;&amp;#x5B50;&amp;#x60">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-23T14:56:28.136Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Concurrency：volatile两种用法">
+<meta name="twitter:description" content="1.volatile&amp;#x80FD;&amp;#x591F;&amp;#x4FDD;&amp;#x8BC1;&amp;#x53D8;&amp;#x91CF;&amp;#x7684;&amp;#x53EF;&amp;#x89C1;&amp;#x6027;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x5E76;&amp;#x4E0D;&amp;#x80FD;&amp;#x4FDD;&amp;#x8BC1;&amp;#x53D8;&amp;#x91CF;&amp;#x7684;&amp;#x539F;&amp;#x5B50;&amp;#x60">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Johuer's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/23/concurrency-volatile/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Concurrency：volatile两种用法 | Johuer's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Johuer's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">多学一点知识，就少写一行代码</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/23/concurrency-volatile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Johuer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xujiuhua.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Johuer's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Concurrency：volatile两种用法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-23 22:52:48 / 修改时间：22:56:28" itemprop="dateCreated datePublished" datetime="2019-01-23T22:52:48+08:00">2019-01-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>1.volatile&#x80FD;&#x591F;&#x4FDD;&#x8BC1;&#x53D8;&#x91CF;&#x7684;&#x53EF;&#x89C1;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x53D8;&#x91CF;&#x7684;&#x539F;&#x5B50;&#x6027;&#x548C;&#x6709;&#x5E8F;&#x6027;&#x3002;</p>
+<p>2.&#x5B83;&#x786E;&#x4FDD;&#x6307;&#x4EE4;&#x91CD;&#x6392;&#x5E8F;&#x65F6;&#x4E0D;&#x4F1A;&#x628A;&#x5176;&#x540E;&#x9762;&#x7684;&#x6307;&#x4EE4;&#x6392;&#x5230;&#x5185;&#x5B58;&#x5C4F;&#x969C;&#x4E4B;&#x524D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x628A;&#x524D;&#x9762;&#x7684;&#x6307;&#x4EE4;&#x6392;&#x5230;&#x5185;&#x5B58;&#x5C4F;&#x969C;&#x7684;&#x540E;&#x9762;&#xFF1B;&#x5373;&#x5728;&#x6267;&#x884C;&#x5230;&#x5185;&#x5B58;&#x5C4F;&#x969C;&#x8FD9;&#x53E5;&#x6307;&#x4EE4;&#x65F6;&#xFF0C;&#x5728;&#x5B83;&#x524D;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x5DF2;&#x7ECF;&#x5168;&#x90E8;&#x5B8C;&#x6210;&#xFF1B;</p>
+<p>3.&#x5B83;&#x4F1A;&#x5F3A;&#x5236;&#x5C06;&#x5BF9;&#x7F13;&#x5B58;&#x7684;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x7ACB;&#x5373;&#x5199;&#x5165;&#x4E3B;&#x5B58;&#xFF1B;</p>
+<p>4.&#x5982;&#x679C;&#x662F;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x5B83;&#x4F1A;&#x5BFC;&#x81F4;&#x5176;&#x4ED6;CPU&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x7F13;&#x5B58;&#x884C;&#x65E0;&#x6548;&#x3002;</p>
+</blockquote>
+<a id="more"></a>
+<p><a href="https://www.cnblogs.com/dolphin0520/p/3920373.html" target="_blank" rel="noopener"><a href="https://www.cnblogs.com/dolphin0520/p/3920373.html" target="_blank" rel="noopener">Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#xFF1A;volatile&#x5173;&#x952E;&#x5B57;&#x89E3;&#x6790;</a></a></p>
+<p><a href="https://blog.csdn.net/hanchao5272/article/details/79604845" target="_blank" rel="noopener">volatile&#x5173;&#x952E;&#x5B57;&#x7684;&#x4E24;&#x79CD;&#x7528;&#x6CD5;</a></p>
+<p><a href="https://blog.csdn.net/biao_suki/article/details/54706971" target="_blank" rel="noopener">System.out.println&#x5F15;&#x53D1;&#x7684;volatile&#x548C;synchronize</a></p>
+<p><a href="https://www.cnblogs.com/xz816111/p/8470048.html" target="_blank" rel="noopener"><a href="https://www.cnblogs.com/xz816111/p/8470048.html" target="_blank" rel="noopener">Java&#x4E2D;&#x7684;&#x53CC;&#x91CD;&#x68C0;&#x67E5;&#x9501;&#xFF08;double checked locking&#xFF09;</a></a></p>
+<h2 id="volatile&#x7684;&#x4E24;&#x79CD;&#x7528;&#x6CD5;"><a href="#volatile&#x7684;&#x4E24;&#x79CD;&#x7528;&#x6CD5;" class="headerlink" title="volatile&#x7684;&#x4E24;&#x79CD;&#x7528;&#x6CD5;"></a>volatile&#x7684;&#x4E24;&#x79CD;&#x7528;&#x6CD5;</h2><ul>
+<li>&#x4E00;&#x6B21;&#x6027;&#x72B6;&#x6001;&#x6807;&#x8BC6; </li>
+<li>&#x4E00;&#x79CD;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#xFF1A;&#x53CC;&#x91CD;&#x68C0;&#x67E5;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</li>
+</ul>
+<h4 id="&#x4E00;&#x6B21;&#x6027;&#x72B6;&#x6001;&#x6807;&#x8BC6;"><a href="#&#x4E00;&#x6B21;&#x6027;&#x72B6;&#x6001;&#x6807;&#x8BC6;" class="headerlink" title="&#x4E00;&#x6B21;&#x6027;&#x72B6;&#x6001;&#x6807;&#x8BC6;"></a>&#x4E00;&#x6B21;&#x6027;&#x72B6;&#x6001;&#x6807;&#x8BC6;</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo2</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> shutdown;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        Demo2 demo2 = <span class="keyword">new</span> Demo2();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; demo2.doWork()).start();</span><br><span class="line">        <span class="keyword">try</span> {</span><br><span class="line">            Thread.sleep(<span class="number">10</span>);</span><br><span class="line">        } <span class="keyword">catch</span> (InterruptedException e) {</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; demo2.shutdown()).start();</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shutdown</span><span class="params">()</span> </span>{</span><br><span class="line">        shutdown = <span class="keyword">true</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;&#x505C;&#x6B62;&#x5DE5;&#x4F5C;&quot;</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doWork</span><span class="params">()</span> </span>{</span><br><span class="line">        System.out.println(<span class="string">&quot;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&quot;</span>);</span><br><span class="line">        <span class="keyword">while</span> (!shutdown) {</span><br><span class="line">            <span class="comment">// do something...</span></span><br><span class="line">        }</span><br><span class="line">        System.out.println(<span class="string">&quot;&#x5DF2;&#x7ECF;&#x505C;&#x6B62;&#x5DE5;&#x4F5C;&quot;</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;</span><br><span class="line">&#x505C;&#x6B62;&#x5DE5;&#x4F5C;</span><br></pre></td></tr></table></figure>
+<p>&#x5E76;&#x6CA1;&#x6709;&#x8F93;&#x51FA;&#x201D;&#x5DF2;&#x7ECF;&#x505C;&#x6B62;&#x5DE5;&#x4F5C;&#x201D;&#xFF0C;&#x8BF4;&#x660E;&#x7EBF;&#x7A0B;<code>doWork()</code>&#x5E76;&#x6CA1;&#x6709;&#x611F;&#x89C9;&#x5230;&#x7EBF;&#x7A0B;<code>shutdown()</code>&#x72B6;&#x6001;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x4ECE;&#x5185;&#x5B58;&#x89D2;&#x5EA6;&#x8BB2;&#xFF1A;</p>
+<p>&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x5DE5;&#x4F5C;&#x5185;&#x5B58;&#xFF0C;&#x5F53;&#x7EBF;&#x7A0B;<code>dowork()</code>&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x4F1A;&#x628A;&#x4E3B;&#x5185;&#x5B58;&#x4E2D;&#x7684;<code>shudown=false</code>&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x5230;&#x5DE5;&#x4F5C;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x7EBF;&#x7A0B;&#x4E00;&#x76F4;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x526F;&#x672C;<code>shutdown=false</code>&#xFF0C;&#x5F53;&#x7EBF;&#x7A0B;<code>shutdown()</code>&#x628A;&#x53D8;&#x91CF;<code>shutdown</code>&#x66F4;&#x65B0;&#x4E3A;<code>true</code>&#x540C;&#x65F6;&#x66F4;&#x65B0;&#x5230;&#x4E3B;&#x5185;&#x5B58;&#x65F6;&#xFF0C;&#x7EBF;&#x7A0B;<code>dowork()</code>&#x4E2D;<code>shutdown</code>&#x4E00;&#x76F4;&#x8FD8;&#x662F;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x5DE5;&#x4F5C;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x526F;&#x672C;<code>false</code>, &#x6240;&#x4EE5;&#x9020;&#x6210;&#x6B7B;&#x5FAA;&#x73AF;&#x3002;</p>
+<p>&#x589E;&#x52A0;&#x5173;&#x952E;&#x5B57;<code>volatile</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">volatile</span> <span class="keyword">boolean</span> shutdown;</span><br></pre></td></tr></table></figure>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;</span><br><span class="line">&#x505C;&#x6B62;&#x5DE5;&#x4F5C;</span><br><span class="line">&#x5DF2;&#x7ECF;&#x505C;&#x6B62;&#x5DE5;&#x4F5C;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>&#x5173;&#x952E;&#x70B9;:</p>
+<ol>
+<li>&#x72B6;&#x6001;&#x6807;&#x5FD7;&#x7684;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x662F;<strong>&#x539F;&#x5B50;</strong>&#x64CD;&#x4F5C;&#x3002;&#x4F8B;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5BF9;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;Java&#x4E2D;&#x662F;&#x539F;&#x5B50;&#x6027;&#x64CD;&#x4F5C;</li>
+<li>&#x53EA;&#x6709;<strong>&#x4E00;&#x6B21;&#x6027;</strong>&#x7684;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x3002;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x72B6;&#x6001;&#x6807;&#x5FD7;&#x4F4D;&#x53EA;&#x662F;&#x4ECE;false&#x8F6C;&#x6362;&#x4E3A;true&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x7EE7;&#x7EED;&#x8FDB;&#x884C;&#x4ECE;true&#x5230;false&#x7684;&#x8F6C;&#x6362;&#x7B49;&#x3002;&#x8FD9;&#x79CD;&#x8F6C;&#x6362;&#x7684;<strong>&#x4E00;&#x6B21;&#x6027;</strong>&#x675C;&#x7EDD;&#x4E86;&#x6709;&#x5E8F;&#x6027;&#x95EE;&#x9898;&#x7684;&#x4EA7;&#x751F;&#x3002;</li>
+</ol>
+</blockquote>
+<h4 id="&#x53CC;&#x91CD;&#x68C0;&#x67E5;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;"><a href="#&#x53CC;&#x91CD;&#x68C0;&#x67E5;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;" class="headerlink" title="&#x53CC;&#x91CD;&#x68C0;&#x67E5;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;"></a>&#x53CC;&#x91CD;&#x68C0;&#x67E5;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>{</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">null</span>;</span><br><span class="line">     </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>{</span><br><span class="line">         </span><br><span class="line">    }</span><br><span class="line">     </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>{</span><br><span class="line">        <span class="keyword">if</span>(instance==<span class="keyword">null</span>) {</span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton.class) {</span><br><span class="line">                <span class="keyword">if</span>(instance==<span class="keyword">null</span>)</span><br><span class="line">                    instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>instance = new DoubleCheckSingleton(); &#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x4E0D;&#x662F;&#x539F;&#x5B50;&#x6027;&#x7684;&#xFF1B;<br>&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x5212;&#x5206;&#x4E3A;&#xFF1A;</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>&#x5728;Heap&#x4E2D;&#x5F00;&#x8F9F;&#x5730;&#x5740;&#xFF0C;&#x8FDB;&#x884C;&#x5BF9;&#x8C61;&#x521D;&#x59CB;&#x5316;&#xFF1A;new DoubleCheckSingleton()</li>
+<li>&#x5C06;Heap&#x4E2D;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x7684;DoubleCheckSingleton&#x5BF9;&#x8C61;&#x5730;&#x5740;&#xFF0C;&#x6307;&#x5411;Thread Stack&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x5F15;&#x7528;instance&#x3002;</li>
+</ol>
+</blockquote>
+<p>&#x52A0;&#x5165;&#x5173;&#x952E;&#x5B57;<code>volatile</code>&#x3002;&#x4F7F;&#x7528;&#x4E86;volatile&#x5173;&#x952E;&#x5B57;&#x540E;&#xFF0C;&#x91CD;&#x6392;&#x5E8F;&#x88AB;&#x7981;&#x6B62;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5199;&#xFF08;write&#xFF09;&#x64CD;&#x4F5C;&#x90FD;&#x5C06;&#x53D1;&#x751F;&#x5728;&#x8BFB;&#xFF08;read&#xFF09;&#x64CD;&#x4F5C;&#x4E4B;&#x524D;&#x3002;</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/并发/" rel="tag"># 并发</a>
+          
+            <a href="/tags/volatile/" rel="tag"># volatile</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/22/DP_Prototype_4-23/" rel="next" title="图解设计模式(Creational)-Prototype 4/23">
+                <i class="fa fa-chevron-left"></i> 图解设计模式(Creational)-Prototype 4/23
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/xujiuhua.png"
+                alt="Johuer" />
+            
+              <p class="site-author-name" itemprop="name">Johuer</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/xujiuhua" title="GitHub &rarr; https://github.com/xujiuhua" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:xujiuhuamoney@163.com" title="E-Mail &rarr; mailto:xujiuhuamoney@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#volatile的两种用法"><span class="nav-number">1.</span> <span class="nav-text">volatile的两种用法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一次性状态标识"><span class="nav-number">1.0.1.</span> <span class="nav-text">一次性状态标识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双重检查单例模式"><span class="nav-number">1.0.2.</span> <span class="nav-text">双重检查单例模式</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Johuer</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
