@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-20T12:25:56.314Z</updated>
+  <updated>2019-09-22T09:16:39.210Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>xujh-images</title>
+    <link href="http://yoursite.com/2019/09/22/xujh-images/"/>
+    <id>http://yoursite.com/2019/09/22/xujh-images/</id>
+    <published>2019-09-22T08:56:35.000Z</published>
+    <updated>2019-09-22T09:16:39.210Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is my all images.</p><a id="more"></a><p><img src="/2019/09/22/xujh-images/nexus.png" style="width:200px;height:200px;float:left"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This is my all images.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>kafka重复消费</title>
@@ -518,38 +536,6 @@
     
     
       <category term="MyBatis" scheme="http://yoursite.com/tags/MyBatis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hbuilder Android 离线打包</title>
-    <link href="http://yoursite.com/2016/11/12/hbuilder-android-studio/"/>
-    <id>http://yoursite.com/2016/11/12/hbuilder-android-studio/</id>
-    <published>2016-11-12T12:42:05.000Z</published>
-    <updated>2016-11-14T07:54:44.725Z</updated>
-    
-    <content type="html"><![CDATA[<p>&#x53C2;&#x7167;Hbuilder&#x5B98;&#x65B9;<a href="http://ask.dcloud.net.cn/article/38" target="_blank" rel="noopener">Android&#x79BB;&#x7EBF;&#x6253;&#x5305;</a>&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x8981;&#x8017;&#x8D39;&#x4E0D;&#x5C11;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x91CC;&#x8BB0;&#x5F55;&#x4E0B;&#x81EA;&#x5DF1;&#x5B9E;&#x8DF5;&#x7684;&#x6253;&#x5305;&#x6B65;&#x9AA4;&#x3002;</p><p><a href="https://github.com/xujiuhua/PackageDemo" target="_blank" rel="noopener">&#x6E90;&#x7801;</a></p><h2 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h2><ul><li>Android Studio</li><li>Hbuilder</li></ul><h2 id="&#x65B9;&#x6CD5;&#x4E00;"><a href="#&#x65B9;&#x6CD5;&#x4E00;" class="headerlink" title="&#x65B9;&#x6CD5;&#x4E00;"></a>&#x65B9;&#x6CD5;&#x4E00;</h2><h3 id="&#x4E0B;&#x8F7D;SDK&#x9879;&#x76EE;"><a href="#&#x4E0B;&#x8F7D;SDK&#x9879;&#x76EE;" class="headerlink" title="&#x4E0B;&#x8F7D;SDK&#x9879;&#x76EE;"></a>&#x4E0B;&#x8F7D;SDK&#x9879;&#x76EE;</h3><p><a href="http://ask.dcloud.net.cn/article/103" target="_blank" rel="noopener">SDK&#x9879;&#x76EE;&#x5730;&#x5740;</a></p><p>&#x89E3;&#x538B;&#x540E;&#x76EE;&#x5F55;</p><p><img src="/2016/11/12/hbuilder-android-studio/sdk.png"></p><a id="more"></a><h3 id="Android-Studio-&#x5BFC;&#x5165;HBuilder-Hello&#x6F14;&#x793A;&#x9879;&#x76EE;"><a href="#Android-Studio-&#x5BFC;&#x5165;HBuilder-Hello&#x6F14;&#x793A;&#x9879;&#x76EE;" class="headerlink" title="Android Studio &#x5BFC;&#x5165;HBuilder-Hello&#x6F14;&#x793A;&#x9879;&#x76EE;"></a>Android Studio &#x5BFC;&#x5165;<code>HBuilder-Hello</code>&#x6F14;&#x793A;&#x9879;&#x76EE;</h3><p>&#x4E0D;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x66F4;&#x6539;&#xFF0C;&#x5BFC;&#x5165;&#x540E;&#x9879;&#x76EE;&#x7ED3;&#x6784;</p><p><img src="/2016/11/12/hbuilder-android-studio/struct.png"></p><h3 id="&#x8FD0;&#x884C;&#x9879;&#x76EE;"><a href="#&#x8FD0;&#x884C;&#x9879;&#x76EE;" class="headerlink" title="&#x8FD0;&#x884C;&#x9879;&#x76EE;"></a>&#x8FD0;&#x884C;&#x9879;&#x76EE;</h3><p><img src="/2016/11/12/hbuilder-android-studio/demo.png"></p><h3 id="&#x57FA;&#x4E8E;&#x4EE5;&#x4E0A;&#x9879;&#x76EE;&#x96C6;&#x6210;&#x81EA;&#x5DF1;&#x7684;Hbuilder&#x9879;&#x76EE;"><a href="#&#x57FA;&#x4E8E;&#x4EE5;&#x4E0A;&#x9879;&#x76EE;&#x96C6;&#x6210;&#x81EA;&#x5DF1;&#x7684;Hbuilder&#x9879;&#x76EE;" class="headerlink" title="&#x57FA;&#x4E8E;&#x4EE5;&#x4E0A;&#x9879;&#x76EE;&#x96C6;&#x6210;&#x81EA;&#x5DF1;&#x7684;Hbuilder&#x9879;&#x76EE;"></a>&#x57FA;&#x4E8E;&#x4EE5;&#x4E0A;&#x9879;&#x76EE;&#x96C6;&#x6210;&#x81EA;&#x5DF1;&#x7684;Hbuilder&#x9879;&#x76EE;</h3><h4 id="assets-apps&#x4E0B;&#x5220;&#x9664;HelloH5"><a href="#assets-apps&#x4E0B;&#x5220;&#x9664;HelloH5" class="headerlink" title="assets\apps&#x4E0B;&#x5220;&#x9664;HelloH5"></a><code>assets\apps</code>&#x4E0B;&#x5220;&#x9664;<code>HelloH5</code></h4><p><img src="/2016/11/12/hbuilder-android-studio/delete.png"></p><h4 id="assets-apps&#x65B0;&#x5EFA;&#x76EE;&#x5F55;"><a href="#assets-apps&#x65B0;&#x5EFA;&#x76EE;&#x5F55;" class="headerlink" title="assets\apps&#x65B0;&#x5EFA;&#x76EE;&#x5F55;"></a><code>assets\apps</code>&#x65B0;&#x5EFA;&#x76EE;&#x5F55;</h4><blockquote><p>&#x76EE;&#x5F55;&#x540D;&#x79F0;&#x4FEE;&#x6539;&#x4E3A;&#x5E94;&#x7528;manifest.json&#x4E2D;&#x7684;id&#x540D;&#x79F0;&#xFF08;&#x8FD9;&#x6B65;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x5E94;&#x7528;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x542F;&#x52A8;&#xFF09;&#xFF0C;&#x5E76;&#x5C06;&#x6240;&#x6709;&#x5E94;&#x7528;&#x8D44;&#x6E90;&#x62F7;&#x8D1D;&#x5230;&#x5176;&#x4E0B;&#x7684;www&#x76EE;&#x5F55;&#x4E2D;</p></blockquote><p><img src="/2016/11/12/hbuilder-android-studio/file-name.png"></p><p><img src="/2016/11/12/hbuilder-android-studio/create.png"></p><h4 id="package&#x7ED3;&#x6784;"><a href="#package&#x7ED3;&#x6784;" class="headerlink" title="package&#x7ED3;&#x6784;"></a>package&#x7ED3;&#x6784;</h4><ol><li><p>&#x65B0;&#x5EFA;&#x5305;&#x540D;&#x5C31;&#x662F;Android&#x5305;&#x540D;&#xFF0C;&#x4F8B;&#x5982;<code>com.xhs</code></p></li><li><p>&#x590D;&#x5236;<code>src\io\dcloud\HBuilder\Hello</code>&#x4E0B;&#x6587;&#x4EF6;&#x5230;<code>com.xhs</code></p></li><li><p>&#x4FDD;&#x7559;<code>src\io\dcloud\RInformation.java</code>&#xFF0C;&#x5220;&#x9664;<code>src\io\dcloud</code>&#x4E2D;&#x5176;&#x5B83;&#x6587;&#x4EF6;</p></li></ol><p>&#x6700;&#x7EC8;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;</p><p><img src="/2016/11/12/hbuilder-android-studio/new-struct.png"></p><h4 id="&#x4FEE;&#x6539;AndroidManifest-xml"><a href="#&#x4FEE;&#x6539;AndroidManifest-xml" class="headerlink" title="&#x4FEE;&#x6539;AndroidManifest.xml"></a>&#x4FEE;&#x6539;<code>AndroidManifest.xml</code></h4><ol><li>&#x5168;&#x6587;&#x66FF;&#x6362;(Ctrl+R) , <code>io.dcloud.HBuilder.Hello</code>&#x66FF;&#x6362;&#x4E3A;<code>com.xhs</code> (APP&#x5305;&#x540D;)</li><li>versionCode&#x4E3A;&#x5E94;&#x7528;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF08;&#x6574;&#x6570;&#x503C;&#xFF09;&#xFF0C;&#x7528;&#x4E8E;&#x5404;&#x5E94;&#x7528;&#x5E02;&#x573A;&#x7684;&#x5347;&#x7EA7;&#x5224;&#x65AD;&#xFF0C;&#x5EFA;&#x8BAE;&#x4E0E;manifest.json&#x4E2D;version -&gt; code&#x503C;&#x4E00;&#x81F4;&#xFF1B;</li><li>versionName&#x4E3A;&#x5E94;&#x7528;&#x7684;&#x7248;&#x672C;&#x540D;&#x79F0;&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#xFF09;&#xFF0C;&#x5728;&#x7CFB;&#x7EDF;&#x5E94;&#x7528;&#x7BA1;&#x7406;&#x7A0B;&#x5E8F;&#x4E2D;&#x663E;&#x793A;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x5EFA;&#x8BAE;&#x4E0E;manifest.json&#x4E2D;version -&gt; name&#x503C;&#x4E00;&#x81F4;</li></ol><p><img src="/2016/11/12/hbuilder-android-studio/AndroidManifest.png"></p><h4 id="&#x914D;&#x7F6E;&#x5E94;&#x7528;&#x4FE1;&#x606F;"><a href="#&#x914D;&#x7F6E;&#x5E94;&#x7528;&#x4FE1;&#x606F;" class="headerlink" title="&#x914D;&#x7F6E;&#x5E94;&#x7528;&#x4FE1;&#x606F;"></a>&#x914D;&#x7F6E;&#x5E94;&#x7528;&#x4FE1;&#x606F;</h4><p>&#x6253;&#x5F00;assets -&gt; data&#x4E0B;&#x7684;control.xml&#x6587;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;appid&#x503C;&#xFF1A;</p><p><img src="/2016/11/12/hbuilder-android-studio/data-info.png"></p><h4 id="&#x914D;&#x7F6E;build-gradle"><a href="#&#x914D;&#x7F6E;build-gradle" class="headerlink" title="&#x914D;&#x7F6E;build.gradle"></a>&#x914D;&#x7F6E;<code>build.gradle</code></h4><blockquote><p>applicationId: app&#x5305;&#x540D;, &#x914D;&#x7F6E;&#x5B8C;&#x540C;&#x6B65;&#x4E00;&#x6B21;</p></blockquote><p><img src="/2016/11/12/hbuilder-android-studio/build-gradle.png"></p><h4 id="&#x542F;&#x52A8;&#x5DE5;&#x7A0B;"><a href="#&#x542F;&#x52A8;&#x5DE5;&#x7A0B;" class="headerlink" title="&#x542F;&#x52A8;&#x5DE5;&#x7A0B;"></a>&#x542F;&#x52A8;&#x5DE5;&#x7A0B;</h4><p><img src="/2016/11/12/hbuilder-android-studio/result.png"></p><h2 id="&#x65B9;&#x6CD5;&#x4E8C;"><a href="#&#x65B9;&#x6CD5;&#x4E8C;" class="headerlink" title="&#x65B9;&#x6CD5;&#x4E8C;"></a>&#x65B9;&#x6CD5;&#x4E8C;</h2><p>TODO</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;#x53C2;&amp;#x7167;Hbuilder&amp;#x5B98;&amp;#x65B9;&lt;a href=&quot;http://ask.dcloud.net.cn/article/38&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Android&amp;#x79BB;&amp;#x7EBF;&amp;#x6253;&amp;#x5305;&lt;/a&gt;&amp;#xFF0C;&amp;#x6BCF;&amp;#x6B21;&amp;#x90FD;&amp;#x8981;&amp;#x8017;&amp;#x8D39;&amp;#x4E0D;&amp;#x5C11;&amp;#x65F6;&amp;#x95F4;&amp;#xFF0C;&amp;#x8FD9;&amp;#x91CC;&amp;#x8BB0;&amp;#x5F55;&amp;#x4E0B;&amp;#x81EA;&amp;#x5DF1;&amp;#x5B9E;&amp;#x8DF5;&amp;#x7684;&amp;#x6253;&amp;#x5305;&amp;#x6B65;&amp;#x9AA4;&amp;#x3002;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/xujiuhua/PackageDemo&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&amp;#x6E90;&amp;#x7801;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Tool&quot;&gt;&lt;a href=&quot;#Tool&quot; class=&quot;headerlink&quot; title=&quot;Tool&quot;&gt;&lt;/a&gt;Tool&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Android Studio&lt;/li&gt;
-&lt;li&gt;Hbuilder&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;&amp;#x65B9;&amp;#x6CD5;&amp;#x4E00;&quot;&gt;&lt;a href=&quot;#&amp;#x65B9;&amp;#x6CD5;&amp;#x4E00;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x65B9;&amp;#x6CD5;&amp;#x4E00;&quot;&gt;&lt;/a&gt;&amp;#x65B9;&amp;#x6CD5;&amp;#x4E00;&lt;/h2&gt;&lt;h3 id=&quot;&amp;#x4E0B;&amp;#x8F7D;SDK&amp;#x9879;&amp;#x76EE;&quot;&gt;&lt;a href=&quot;#&amp;#x4E0B;&amp;#x8F7D;SDK&amp;#x9879;&amp;#x76EE;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x4E0B;&amp;#x8F7D;SDK&amp;#x9879;&amp;#x76EE;&quot;&gt;&lt;/a&gt;&amp;#x4E0B;&amp;#x8F7D;SDK&amp;#x9879;&amp;#x76EE;&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://ask.dcloud.net.cn/article/103&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SDK&amp;#x9879;&amp;#x76EE;&amp;#x5730;&amp;#x5740;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&amp;#x89E3;&amp;#x538B;&amp;#x540E;&amp;#x76EE;&amp;#x5F55;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2016/11/12/hbuilder-android-studio/sdk.png&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="移动端" scheme="http://yoursite.com/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
-    
-    
-      <category term="Hbuilder" scheme="http://yoursite.com/tags/Hbuilder/"/>
-    
-      <category term="Android Studio" scheme="http://yoursite.com/tags/Android-Studio/"/>
     
   </entry>
   
