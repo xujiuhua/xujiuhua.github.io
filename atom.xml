@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Johuer&#39;s Blog</title>
   
-  <subtitle>多学一点知识，就少写一行代码</subtitle>
+  <subtitle>多学知识，精简代码</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-22T09:16:39.210Z</updated>
+  <updated>2019-09-26T13:48:25.397Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/09/22/xujh-images/"/>
     <id>http://yoursite.com/2019/09/22/xujh-images/</id>
     <published>2019-09-22T08:56:35.000Z</published>
-    <updated>2019-09-22T09:16:39.210Z</updated>
+    <updated>2019-09-26T13:48:25.397Z</updated>
     
-    <content type="html"><![CDATA[<p>This is my all images.</p><a id="more"></a><p><img src="/2019/09/22/xujh-images/nexus.png" style="width:200px;height:200px;float:left"></p>]]></content>
+    <content type="html"><![CDATA[<p>This is my all images.</p><a id="more"></a><p><img src="/2019/09/22/xujh-images/nexus.png" style="width:200px;height:200px;float:left"><br><img src="/2019/09/22/xujh-images/mvn-release-prepare.png" style="width:200px;height:200px;float:left"><br><img src="xujh-images/http1.png" style="width:200px;height:200px;float:left"></p>]]></content>
     
     <summary type="html">
     
